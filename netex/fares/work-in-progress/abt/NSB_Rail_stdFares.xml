@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- ==== NSB Rail Fare Example ====== -->
+<!-- ==== NSB Rail Fare Examples  ====== 
+    A few of the essential NSB fare products, to illustrate modelling issues
+-->
 <PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.netex.org.uk/netex file:/Users/hegedreiem/entur/NetEx%20xmls/NeTEx-V01,09-examples/xsd/NeTEx_publication.xsd"
+    xsi:schemaLocation="http://www.netex.org.uk/netex"
     xmlns="http://www.netex.org.uk/netex" xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:siri="http://www.siri.org.uk/siri" version="1.0">
     <PublicationTimestamp>2018-10-08T09:30:47.0Z</PublicationTimestamp>
@@ -11,6 +13,7 @@
     <dataObjects>
         <FareFrame version="01" id="RUT:FareFrame:FareData">
             <AuthorityRef ref="RUT:Authority:RUT"></AuthorityRef>
+            
             <fareZones>
                 <FareZone id="RUT:TariffZone:2V" version="any"></FareZone>
                 <FareZone id="RUT:TariffZone:4V" version="any"></FareZone>
@@ -24,6 +27,233 @@
                 <FareZone id="RUT:TariffZone:2S" version="any"></FareZone>
                 <FareZone id="RUT:TariffZone:1" version="any"></FareZone>
             </fareZones>
+            
+            <fareStructureElements>
+                <FareStructureElement id="RUT:FareStructureElement:ZONEInterval" version="01">
+                      <geographicalIntervals>
+                         <GeographicalInterval id="RUT:GeographicalInterval:1zone" version="01">
+                             <StartGeographicalValue>0</StartGeographicalValue>
+                             <EndGeographicalValue>1</EndGeographicalValue>
+                             <IntervalType>tariffZone</IntervalType>
+                         </GeographicalInterval>
+                         <GeographicalInterval id="RUT:GeographicalInterval:2zone" version="01">
+                             <StartGeographicalValue>1</StartGeographicalValue>
+                             <EndGeographicalValue>2</EndGeographicalValue>
+                             <IntervalType>tariffZone</IntervalType>
+                         </GeographicalInterval>
+                         <GeographicalInterval id="RUT:GeographicalInterval:3zone"  version="01">
+                             <StartGeographicalValue>2</StartGeographicalValue>
+                             <EndGeographicalValue>3</EndGeographicalValue>
+                             <IntervalType>tariffZone</IntervalType>
+                         </GeographicalInterval> 
+                         <GeographicalInterval id="RUT:GeographicalInterval:4zone"  version="01">
+                             <StartGeographicalValue>3</StartGeographicalValue>
+                             <EndGeographicalValue>4</EndGeographicalValue>
+                             <IntervalType>tariffZone</IntervalType>
+                         </GeographicalInterval> 
+                         <GeographicalInterval id="RUT:GeographicalInterval:5zonesAndAbove"  version="01">
+                             <StartGeographicalValue>5</StartGeographicalValue>
+                             <EndGeographicalValue>11</EndGeographicalValue>
+                             <IntervalType>tariffZone</IntervalType>
+                         </GeographicalInterval>
+                     </geographicalIntervals>
+                    <validityParameterAssignments>
+                        <GenericParameterAssignment id="RUT:GenericParameterAssignment:AllowedZones" version="01" order="01">
+                            <ValidityParameterAssignmentType>LE</ValidityParameterAssignmentType>
+                            <validityParameters>
+                                <FareZoneRef ref="RUT:TariffZone:3S"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:4OE"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:3V"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:4V"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:2S"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:1"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:2V"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:3OE"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:2OE"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:4N"></FareZoneRef>
+                                <FareZoneRef ref="RUT:TariffZone:4SOE"></FareZoneRef>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                        <GenericParameterAssignment id="RUT:GenericParameterAssignment:AllowedInterchange" version="01" order="01">
+                            <limitations>
+                                <Interchanging id="RUT:Interchanging:Unlimited" version="01">
+                                    <TypeOfUsageParameterRef ref="ENT:TypeOfUsageParameter:ThroughFareInterchanging"></TypeOfUsageParameterRef>
+                                    <CanInterchange>true</CanInterchange>
+                                </Interchanging>
+                            </limitations>
+                        </GenericParameterAssignment>
+                        <GenericParameterAssignment id="RUT:GenericParameterAssignment:Eligibility" version="01" order="01">
+                            <IncludesGroupingType>XOR</IncludesGroupingType>
+                            <includes>
+                                <GenericParameterAssignment id="RUT:GenericParameterAssignment:UserProfile" version="01" order="01">
+                                    <LimitationGroupingType>XOR</LimitationGroupingType>
+                                    <limitations>
+                                        <UserProfileRef ref="RUT:UserProfile:Adult"></UserProfileRef>
+                                        <UserProfileRef ref="RUT:UserProfile:Child"></UserProfileRef>
+                                        <UserProfileRef ref="RUT:UserProfile:Senior"></UserProfileRef>
+                                        <UserProfileRef ref="RUT:UserProfile:Student"></UserProfileRef>
+                                        <UserProfileRef ref="RUT:UserProfile:Youth"></UserProfileRef>
+                                        <UserProfileRef ref="RUT:UserProfile:Military"></UserProfileRef>
+                                    </limitations>
+                                </GenericParameterAssignment>
+                            </includes>
+                        </GenericParameterAssignment>
+                    </validityParameterAssignments>
+                </FareStructureElement>
+            </fareStructureElements>
+            <tariffs>
+                <Tariff id="" version="01">
+                    <fareTables>
+                        <FareTable id="RUT:FareTable:Ruter" version="01">
+                            <pricesFor>
+                                <PriceableObjectRef ref="RUT:FareStructureElement:ZONEInterval"></PriceableObjectRef>
+                            </pricesFor>
+                            <cells>
+                                <Cell id="RUT:Cell:1zoneAdult" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>35</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Adult"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:1zone"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell>
+                                <Cell id="RUT:Cell:2zoneAdult" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>57</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Adult"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:2zone"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell> 
+                                <Cell id="RUT:Cell:3zoneAdult" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>79</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Adult"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:3zone"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell>
+                                <Cell id="RUT:Cell:4zoneAdult" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>101</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Adult"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:4zone"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell>
+                                <Cell id="RUT:Cell:5zoneAdult" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>123</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Adult"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:5zonesAndAbove"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell>
+                                <Cell id="RUT:Cell:1zoneChild" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>18</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Child"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:1zone"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell>
+                                <Cell id="RUT:Cell:2zoneChild" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>29</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Child"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:2zone"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell> 
+                                <Cell id="RUT:Cell:3zoneChild" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>40</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Child"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:3zone"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell>
+                                <Cell id="RUT:Cell:4zoneChild" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>51</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Child"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:4zone"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell>
+                                <Cell id="RUT:Cell:5zoneChild" version="1" order="1">
+                                    <CellPrice>
+                                        <Amount>62</Amount>
+                                    </CellPrice>
+                                    <UserProfileRef ref="RUT:UserProfile:Child"></UserProfileRef>
+                                    <GeographicalIntervalRef ref="RUT:GeographicalInterval:5zonesAndAbove"></GeographicalIntervalRef>
+                                    <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"></FareStructureElementRef>
+                                </Cell>
+                                <!-- etc -->
+                            </cells>
+                        </FareTable>
+                    </fareTables>
+                </Tariff>
+            </tariffs>
+            
+            <validableElements>
+                <ValidableElement id="RUT:ValidableElement:RuterSingleTicket" version="01">
+                    <fareStructureElements>
+                        <FareStructureElementRef ref="RUT:FareStructureElement:ZONEInterval"/>
+                    </fareStructureElements>
+                </ValidableElement>
+            </validableElements>
+            <usageParameters>
+                <UserProfile id="RUT:UserProfile:Adult" version="01">
+                    <UserType>adult</UserType>
+                </UserProfile>
+                <UserProfile id="RUT:UserProfile:Child" version="01">
+                    <UserType>child</UserType>
+                    <MaximumAge>18</MaximumAge> 
+                </UserProfile>
+                <UserProfile id="RUT:UserProfile:Senior" version="01">
+                    <UserType>senior</UserType>
+                </UserProfile>
+                <UserProfile id="RUT:UserProfile:Youth" version="01">
+                    <MinimumAge>16</MinimumAge>
+                    <MaximumAge>19</MaximumAge>
+                </UserProfile>
+                <UserProfile id="RUT:UserProfile:Student" version="01">
+                    <MinimumAge>20</MinimumAge>
+                    <MaximumAge>30</MaximumAge>
+                </UserProfile>
+                <UserProfile id="RUT:UserProfile:Military" version="01">
+                </UserProfile>
+            </usageParameters>
+            
+            <fareProducts>
+                <!-- The Ruter single ticket is valid on all operators for Ruter Authority and on rail within Ruter zones for operators NSB and GJB (no other rail operators) -->
+                <PreassignedFareProduct id="RUT:PreassignedFareProduct:RuterSingleTicket" version="01">
+                    <validityParameterAssignments>
+                        <GenericParameterAssignment id="RUT:GenericParameterAssignment:AllowedOperators" version="01" order="01">
+                            <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                            <validityParameters>
+                                <AuthorityRef ref="RUT:Authority:RUT"/>
+                            </validityParameters>
+                            <IncludesGroupingType>OR</IncludesGroupingType>
+                            <includes>
+                                <GenericParameterAssignment id="RUT:RuterSingleTicket@onRail" version="01" order="01">
+                                    <validityParameters>
+                                        <OperatorRef ref="GJB:Operator:GJB"/>
+                                        <OperatorRef ref="NSB:Operator:NSB"/>
+                                    </validityParameters>
+                                </GenericParameterAssignment>
+                            </includes>
+                        </GenericParameterAssignment>
+                    </validityParameterAssignments>
+                    <accessRightsInProduct>
+                        <AccessRightInProduct id="RUT:AccessRightInProduct:RuterSingleTicket" version="01" order="1">
+                            <ValidableElementRef ref="RUT:ValidableElement:RuterSingleTicket" version="01"></ValidableElementRef>
+                        </AccessRightInProduct>
+                    </accessRightsInProduct>
+                </PreassignedFareProduct>
+            </fareProducts>
+            
         </FareFrame>
         <FareFrame version="NSB:Version:V1" created="2017-11-11T12:11:11" id="NSB:FareFrame:FareData">
             <AuthorityRef ref="NSB:Authority:NSB"/>
@@ -122,11 +352,14 @@
                     <MinimalFrequency>1</MinimalFrequency>
                     <MaximalFrequency>1</MaximalFrequency>
                 </FrequencyOfUse>
+                
                 <Interchanging version="any" id="NSB:Interchanging:Unlimited">
-                    <TypeOfUsageParameterRef ref="NSB:TypeOfUsageParameter:ThroughFareInterchanging"></TypeOfUsageParameterRef>
+                    <TypeOfUsageParameterRef ref="ENT:TypeOfUsageParameter:ThroughFareInterchanging"></TypeOfUsageParameterRef>
+                    <CanInterchange>true</CanInterchange>
                     <MaximumTimeToMakeATransfer>PT12H</MaximumTimeToMakeATransfer>
                     <CanBreakJourney>false</CanBreakJourney>
                 </Interchanging>
+                
                 <!---  ===AFTER SALES USAGE PARAMETERS =========    -->
                 <Exchanging id="NSB:Exchanging:NoExchange" version="01">
                     <NumberOfExchangesAllowed>0</NumberOfExchangesAllowed>
@@ -399,6 +632,48 @@
                         </FareProductPrice>
                     </prices>
                 </PreassignedFareProduct>
+                
+                <!-- A seat reservation can be added as a Supplement on regional and interregional lines.
+                    The price is modelled either as a fee for the reservation or a fare product price (both are included here).
+                    Intention is to present the combination of the trip and the seat as one ticket - > should we include a ValidableElement for this SuplementProduct?
+                -->
+                <SupplementProduct id="NSB:SupplementProduct:SeatReservation" version="01">
+                    <validityParameterAssignments>
+                        <GenericParameterAssignment id="NSB:GenericParameterAssignment:SeatReservationReserving" version="01" order="1">
+                            <limitations>
+                                <Reserving version="01" id="NSB:Reserving:SupplementSeatReservation">
+                                    <TypeOfUsageParameterRef ref="ENT:TypeOfUsageParameter:SeatMap"></TypeOfUsageParameterRef>
+                                    <prices>
+                                        <UsageParameterPrice id="NSB:seatReservation" version="01">
+                                            <Amount>60</Amount>
+                                        </UsageParameterPrice>
+                                    </prices>
+                                    <ReservingRequirements>reservationsCompulsory</ReservingRequirements>
+                                    
+                                </Reserving>
+                            </limitations>
+                            <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                            <validityParameters>
+                                <TransportSubmode>
+                                    <RailSubmode>regionalRail</RailSubmode>
+                                </TransportSubmode>
+                                <TransportSubmode>
+                                    <RailSubmode>interregionalRail</RailSubmode>
+                                </TransportSubmode>
+                            </validityParameters>
+                        </GenericParameterAssignment>
+                    </validityParameterAssignments>
+                    <!-- No ValidableElement specified (intentional) -->
+                    <prices>
+                        <FareProductPrice id="NSB:FarePrice:SeatReservation" version="01">
+                            <Amount>60</Amount>
+                            <Currency>NOK</Currency>
+                        </FareProductPrice>
+                    </prices>
+                    <!-- Use entitlements if this is a supplement to more than one FareProduct? -->
+                    <SupplementToFareProductRef ref="NSB:PreassignedFareProduct:MiniPrice"></SupplementToFareProductRef>
+                </SupplementProduct>
+                
             </fareProducts>
 
         </FareFrame>
@@ -728,6 +1003,14 @@
                                 <GeographicalIntervalPrice id="NSB:FarePrice:13TEN" version="01">
                                     <Amount>49</Amount>
                                 </GeographicalIntervalPrice>  
+                                <!-- etc -->
+                                <GeographicalIntervalPrice id="NSB:FarePrice:20TEN" version="01">
+                                    <Amount>64</Amount>
+                                </GeographicalIntervalPrice>
+                                <!-- etc -->
+                                <GeographicalIntervalPrice id="NSB:FarePrice:40TEN" version="01">
+                                    <Amount>108</Amount>
+                                </GeographicalIntervalPrice>
                                 <!-- etc -->
                                 <QualityStructureFactorPrice id="NSB:FarePrice:DiscountPercentage10" version="01">
                                     <DiscountingRule id="NSB:FarePrice:DiscountPercentage10@discount" version="01">
