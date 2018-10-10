@@ -1,0 +1,3853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==== Use of Fare Frame elements  ====== -->
+
+<!-- TAKSTPRODUKTER I SOGN OG FJORDANE
+
+Sogn og Fjordane har et vanlig km-basert taktsregulativ med 3 og 6 km-soner som går opp til 210 km.
+Takstene er registrert v.h.a. Geographical intervals. Dette takstproduktet omfatter alle bussruter som trafikkerer Sogn og Fjordane med følgende unntak:
+Bybussruter, flybussruter, bestillingsruter og ekspressbussruter 
+
+NB! Har ikke tatt med holdeplassdata (stop points), men derimot alle linjer (ruter). I tillegg har jeg bare
+lagt inn noen få intervaller i taksttabellen (geographic intervals). 
+Det er gjort slik siden disse datamengdene er ganske omfattende.
+
+Det som er med her foreløpig er produktet "Enkeltbillett buss". Dette produktet må håndtere innbakte ferjestrekninger -->
+
+<!-- FARE PRODUCTS IN THE COUNTY FINNMARK AND ONE SUPPLEMENT PRODUCT "BICYCLE"
+
+This county uses an ordinary kilometer based fare table with zones of 3 km  and 6 km length. The latter is used from 102 km and upwards the last zone with the end value of 210 km.
+The fares are handled with the use of Geographical intervals.bThis fare product consists of nearly all local bus lines in this county, with some exceptions: city lines, on demand lines and airport shuttles. 
+
+Stop point data is not included in this xml file, but all lines are included. As regards the fare table there are just a few zones registered here (geographic intervals). 
+The fare product included are the product "Single ticket bus" ("Enkeltbillett Buss").
+-->
+
+<PublicationDelivery xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri"
+	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="1.0">
+
+	<PublicationTimestamp>2018-08-15T12:51:00</PublicationTimestamp>
+	<ParticipantRef>SOF</ParticipantRef>
+	<Description>Enkeltbillett Buss</Description>
+
+	<dataObjects>
+
+		<CompositeFrame version="1" created="2018-08-15T12:51:00" id="SOF:CompositeFrame:1">
+
+			<validityConditions>
+				<ValidBetween>
+					<FromDate>2018-03-21T00:00:00</FromDate>
+					<ToDate>2018-08-19T00:00:00</ToDate>
+				</ValidBetween>
+			</validityConditions>
+
+			<codespaces>
+				<Codespace id="fin">
+					<Xmlns>SOF</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/sof</XmlnsUrl>
+				</Codespace>
+				<Codespace id="nsr">
+					<Xmlns>NSR</Xmlns>
+					<XmlnsUrl>http://www.rutebanken.org/ns/nsr</XmlnsUrl>
+				</Codespace>
+			</codespaces>
+
+			<frames>
+				<ResourceFrame version="1" id="SOF:ResourceFrame:1">
+
+					<!-- Authorities and operators -->
+
+					<organisations>
+						<Authority version="1" id="SOF:Authority:1">
+							<CompanyNumber>941388841</CompanyNumber>
+							<Name>Kringom</Name>
+							<LegalName>Sogn og Fjordane fylkeskommune</LegalName>
+							<ContactDetails>
+								<Phone>57638000</Phone>
+								<Url>www.kringom.no</Url>
+							</ContactDetails>
+							<OrganisationType>authority</OrganisationType>
+						</Authority>
+						<Operator version="1" id="SOF:Operator:1">
+							<CompanyNumber>979437218</CompanyNumber>
+							<Name>Firda Billag Buss AS</Name>
+							<LegalName>Firda Billag Buss AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>post@firda-billag.no</Email>
+								<Phone>57725000</Phone>
+								<Url>https://www.firda-billag.no/</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="SOF:Operator:2">
+							<CompanyNumber>976948394</CompanyNumber>
+							<Name>Nettbuss AS avdeling Sogn</Name>
+							<LegalName>Nettbuss AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>kundesenter@nettbuss.no</Email>
+								<Phone>40705070</Phone>
+								<Url>www.nettbuss.no</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="SOF:Operator:3">
+							<CompanyNumber>910500805</CompanyNumber>
+							<Name>Tide Buss AS Avdeling Sogn</Name>
+							<LegalName>Tide Buss AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>post@tide.no</Email>
+								<Phone>46891580</Phone>
+								<Url>www.tide.no</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="SOF:Operator:4">
+							<CompanyNumber>983472583</CompanyNumber>
+							<Name>Fjord1</Name>
+							<LegalName>Fjord1 ASA</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>post@fjord1.no</Email>
+								<Phone>57757000</Phone>
+								<Url>https://www.fjord1.no</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+						<Operator version="1" id="SOF:Operator:5">
+							<CompanyNumber>985859310</CompanyNumber>
+							<Name>Norled AS</Name>
+							<LegalName>Norled AS</LegalName>
+							<CustomerServiceContactDetails>
+								<Email>post@norled.no</Email>
+								<Phone>51868700</Phone>
+								<Url>https://www.norled.no</Url>
+							</CustomerServiceContactDetails>
+						</Operator>
+					</organisations>
+					<groupsOfOperators>
+						<GroupOfOperators id="SOF:GroupOfOperators:1" version="1">
+							<members>
+								<OperatorRef ref="SOF:Operator:1"/>
+								<OperatorRef ref="SOF:Operator:2"/>
+								<OperatorRef ref="SOF:Operator:3"/>
+							</members>
+						</GroupOfOperators>
+						<GroupOfOperators id="SOF:GroupOfOperators:2" version="1">
+							<members>
+								<OperatorRef ref="SOF:Operator:4"/>
+								<OperatorRef ref="SOF:Operator:5"/>
+							</members>
+						</GroupOfOperators>
+					</groupsOfOperators>
+				</ResourceFrame>
+
+				<ServiceFrame version="1" id="SOF:ServiceFrame:Sogn og Fjordane">
+					<!-- Lines  -->
+					<lines>
+
+						<!-- Lokale ordinære bussruter -->
+
+						<Line version="1" id="SOF:Line:14-101">
+							<Name>14-101 Øvre Årdal-Sogndal</Name>
+							<PublicCode>14-101</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-102">
+							<Name>14-102 Øvre Årdal-Årdalstangen-Fodnes-Lærdal</Name>
+							<PublicCode>14-102</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-103">
+							<Name>14-103 Sogndal-Håbakken-Borlaug</Name>
+							<PublicCode>14-103</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-109">
+							<Name>14-109 Flåm-Sogndal</Name>
+							<PublicCode>14-109</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-111">
+							<Name>14-111 Øvre Årdal-Årdalstangen-Seim</Name>
+							<PublicCode>14-111</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-122">
+							<Name>14-122 Øvre Årdal - Ringbuss</Name>
+							<PublicCode>14-122</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-123">
+							<Name>14-123 Øvre Årdal-Utladalen</Name>
+							<PublicCode>14-123</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-125">
+							<Name>14-125 Årdalstangen - Naddvik Ringbuss</Name>
+							<PublicCode>14-125</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-126">
+							<Name>14-126 Årdalstangen-Seimsdalen Ringbuss</Name>
+							<PublicCode>14-126</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-131">
+							<Name>14-131 Lærdal-Sogndal-Vik</Name>
+							<PublicCode>14-131</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-144">
+							<Name>14-144 Gudvangen-Undredal-Flåm-Aurland</Name>
+							<PublicCode>14-144</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-146">
+							<Name>14-146 Aurland-Låvi-Vassbygdi</Name>
+							<PublicCode>14-146</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-151">
+							<Name>14-151 Sogndal-Kaupanger kai</Name>
+							<PublicCode>14-151</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-152">
+							<Name>14-152 Sogndalsringen-Sogndal-Kaupangerskogen</Name>
+							<PublicCode>14-152</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-153">
+							<Name>14-153 Sogndal-Gaupne-Fortun</Name>
+							<PublicCode>14-153</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-154">
+							<Name>14-154 Urnes-Kroken-Sørheim-Skjolden</Name>
+							<PublicCode>14-154</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-159">
+							<Name>14-159 Sogndal-Gaupne-Jostedalen</Name>
+							<PublicCode>14-159</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-161">
+							<Name>14-161 Sogndal-Hafslo-Veitastrond</Name>
+							<PublicCode>14-161</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-162">
+							<Name>14-162 Sogndal-Selseng-Fjærland vkr.</Name>
+							<PublicCode>14-162</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-163">
+							<Name>14-163 Sogndal-Raunehaug</Name>
+							<PublicCode>14-163</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-181">
+							<Name>14-181 Vik-Vangsnes-Feios-Fresvik</Name>
+							<PublicCode>14-181</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-182">
+							<Name>14-182 Vik-Ovrid-Myrkaskog</Name>
+							<PublicCode>14-182</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-183">
+							<Name>14-183 Vik-Tistel-Vik</Name>
+							<PublicCode>14-183</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-184">
+							<Name>14-184 Vik-Arnafjord</Name>
+							<PublicCode>14-184</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-542">
+							<Name>14-542 Bussruter i Fjærland</Name>
+							<PublicCode>14-542</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-543">
+							<Name>14-543 Fjærland-Norsk Bremuseum-Bøyabreen/Supphellebreen</Name>
+							<PublicCode>14-543</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-211">
+							<Name>14-211 Balestrand-Dragsvik-Meel</Name>
+							<PublicCode>14-211</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-221">
+							<Name>14-221 Høyanger-Nessane-Balestrand</Name>
+							<PublicCode>14-221</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-222">
+							<Name>14-222 Høyanger-Vadheim</Name>
+							<PublicCode>14-222</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-226">
+							<Name>14-226 Ringbuss i Høyanger</Name>
+							<PublicCode>14-226</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-241">
+							<Name>14-241 (Høyanger-)Ortnevik-Bjordal-Ikjefjord-Oppedal</Name>
+							<PublicCode>14-241</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-246">
+							<Name>14-246 Brekke-Oppedal-Ikjefjord</Name>
+							<PublicCode>14-246</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-311">
+							<Name>14-311 Oppedal-Rutledal-Eivindvik</Name>
+							<PublicCode>14-311</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-312">
+							<Name>14-312 Brekke-Ynnesdal</Name>
+							<PublicCode>14-312</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-313">
+							<Name>14-313 Dingja-Sollibotn-Eivindvik-Furenes-Sløvåg</Name>
+							<PublicCode>14-313</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-315">
+							<Name>14-315 Byrknes-Mjømna-Ånneland-Sløvåg/Sløvåg-Dalsøyra</Name>
+							<PublicCode>14-315</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-324">
+							<Name>14-324 Krakhella-Daløy</Name>
+							<PublicCode>14-324</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-325">
+							<Name>14-325 Hersvik-Leknessund</Name>
+							<PublicCode>14-325</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-332">
+							<Name>14-332 Nåra-Kolgrov-Haldorsneset-Ytrøy</Name>
+							<PublicCode>14-332</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-341">
+							<Name>14-341 Sørbøvåg-Rysjedalsvika-Lavik-Høyanger-Balestrand-Sogndal</Name>
+							<PublicCode>14-341</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-342">
+							<Name>14-342 Folkestad-Sørbøvåg-Rysjedalsvika</Name>
+							<PublicCode>14-342</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-343">
+							<Name>14-343 Vadheim-Lavik-Bruland-Sørestrand</Name>
+							<PublicCode>14-343</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-344">
+							<Name>14-344 Leirvik-Skor</Name>
+							<PublicCode>14-344</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-345">
+							<Name>14-345 Sognnes/Heggebø-Hyllestad</Name>
+							<PublicCode>14-345</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-346">
+							<Name>14-346 Risnes-Hyllestad</Name>
+							<PublicCode>14-346</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-347">
+							<Name>14-347 Laberg-Sørbøvåg-Hyllestad</Name>
+							<PublicCode>14-347</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-401">
+							<Name>14-401 Førde-Dale-Rysjedalsvika</Name>
+							<PublicCode>14-401</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-402">
+							<Name>14-402 Dale-Sørbøvåg/Folkestad</Name>
+							<PublicCode>14-402</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-411">
+							<Name>14-411 Lammetun-Korssund-Folkestad</Name>
+							<PublicCode>14-411</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-412">
+							<Name>14-412 Dale-Håland/Heggheim</Name>
+							<PublicCode>14-412</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-414">
+							<Name>14-414 Askvoll-Dale-Askvoll</Name>
+							<PublicCode>14-414</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-421">
+							<Name>14-421 Førde-Flokenes-Askvoll</Name>
+							<PublicCode>14-421</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-422">
+							<Name>14-422 Førde-Kråkenes</Name>
+							<PublicCode>14-422</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-423">
+							<Name>14-423 Askvoll-Unneset</Name>
+							<PublicCode>14-423</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-424">
+							<Name>14-424 Stavestrand-Gjelsvik</Name>
+							<PublicCode>14-424</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-432">
+							<Name>14-432 Gjervik-Herland (Atløy)</Name>
+							<PublicCode>14-432</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-433">
+							<Name>14-433 Gjervik-Høyvikbygda (Atløy)</Name>
+							<PublicCode>14-433</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-436">
+							<Name>14-436 Bulandet-Værlandet</Name>
+							<PublicCode>14-436</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-511">
+							<Name>14-511 Sande-Viken-Mjell</Name>
+							<PublicCode>14-511</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-512">
+							<Name>14-512 Sande-Storehaug/Osen/Bygstad-Laukeland</Name>
+							<PublicCode>14-512</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-513">
+							<Name>14-513 Viken-Floten-Gjerland</Name>
+							<PublicCode>14-513</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-521">
+							<Name>14-521 Førde-Masdal-Digernes</Name>
+							<PublicCode>14-521</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-522">
+							<Name>14-522 Førde-Nydal-Holsen-Gjerland/Mjell</Name>
+							<PublicCode>14-522</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-523">
+							<Name>14-523 Førde-Åsane</Name>
+							<PublicCode>14-523</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-531">
+							<Name>14-531 Førde-Vassenden-Sægrov</Name>
+							<PublicCode>14-531</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-532">
+							<Name>14-532 Skei-Myklebust</Name>
+							<PublicCode>14-532</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-533">
+							<Name>14-533 Skei-Førde i Jølster</Name>
+							<PublicCode>14-533</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-534">
+							<Name>14-534 Skei-Fonn</Name>
+							<PublicCode>14-534</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-541">
+							<Name>14-541 Skei-Førde</Name>
+							<PublicCode>14-541</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-551">
+							<Name>14-551 Førde-Grimeland-Botnen</Name>
+							<PublicCode>14-551</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-601">
+							<Name>14-601 Førde-Florø</Name>
+							<PublicCode>14-601</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-602">
+							<Name>14-602 Førde-Naustdal-Vevring-Stavang-Veiesund</Name>
+							<PublicCode>14-602</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-611">
+							<Name>14-611 Førde-Hyen</Name>
+							<PublicCode>14-611</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-612">
+							<Name>14-612 Førde-Naustdal-Fimland</Name>
+							<PublicCode>14-612</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-621">
+							<Name>14-621 Eikefjord-Steindal</Name>
+							<PublicCode>14-621</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-622">
+							<Name>14-622 Eikefjord-Sandvik</Name>
+							<PublicCode>14-622</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-623">
+							<Name>14-623 Eikefjord-Ramsdal</Name>
+							<PublicCode>14-623</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-635">
+							<Name>14-635 Ruter på Askrova</Name>
+							<PublicCode>14-635</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-638">
+							<Name>14-638 Barekstad-Hovdevåg</Name>
+							<PublicCode>14-638</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-651">
+							<Name>14-651 Florø-Grov-Nordalsfjorden</Name>
+							<PublicCode>14-651</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-652">
+							<Name>14-652 Førde-Grov-Svelgen</Name>
+							<PublicCode>14-652</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-653">
+							<Name>14-653 Bortnen-Leirgulen-Svelgen-Florø</Name>
+							<PublicCode>14-653</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-654">
+							<Name>14-654 Villevik-Botnane-Sørgulen-Myklebust-Svelgen</Name>
+							<PublicCode>14-654</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-655">
+							<Name>14-655 Sande-Svelgen</Name>
+							<PublicCode>14-655</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-656">
+							<Name>14-656 Bortnen-Leirgulen-Ålfoten-Førde</Name>
+							<PublicCode>14-656</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-657">
+							<Name>14-657 Davik-Nordfjordeid</Name>
+							<PublicCode>14-657</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-663">
+							<Name>14-663 Bremanger-Kalvåg-Smørhamn</Name>
+							<PublicCode>14-663</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-667">
+							<Name>14-667 Bremanger-Oldeide-Berle-Svelgen</Name>
+							<PublicCode>14-667</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-701">
+							<Name>14-701 Nordfjordeid-Sandane</Name>
+							<PublicCode>14-701</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-702">
+							<Name>14-702 Byrkjelo-Sandane</Name>
+							<PublicCode>14-702</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-703">
+							<Name>14-703 Stryn-Loen-Olden-Utvik-Byrkjelo</Name>
+							<PublicCode>14-703</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-711">
+							<Name>14-711 Sandane-Hyen-Florø</Name>
+							<PublicCode>14-711</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-712">
+							<Name>14-712 Sandane-Hyen-Ommedal-Dalheim</Name>
+							<PublicCode>14-712</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-713">
+							<Name>14-713 Sandane-Rygg-Ravnestad</Name>
+							<PublicCode>14-713</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-721">
+							<Name>14-721 Sandane-Føleide</Name>
+							<PublicCode>14-721</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-722">
+							<Name>14-722 Sandane-Reed-Byrkjelo-Myklebust</Name>
+							<PublicCode>14-722</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-724">
+							<Name>14-724 Sandane-Reed-Årdal-Frøystad</Name>
+							<PublicCode>14-724</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-726">
+							<Name>14-726 Sandane-Kandal-Mykland</Name>
+							<PublicCode>14-726</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-727">
+							<Name>14-727 Sandane-Fjellbygda</Name>
+							<PublicCode>14-727</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-728">
+							<Name>14-728 Sandane ringbuss</Name>
+							<PublicCode>14-728</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-751">
+							<Name>14-751 Stryn-Olden-Oldedalen-Briksdalen</Name>
+							<PublicCode>14-751</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-752">
+							<Name>14-752 Lodalen-Stryn</Name>
+							<PublicCode>14-752</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-761">
+							<Name>14-761 Stryn-Hjelledalen</Name>
+							<PublicCode>14-761</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-762">
+							<Name>14-762 Stryn-Flo</Name>
+							<PublicCode>14-762</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-771">
+							<Name>14-771 Stryn-Hopland-Hennebygda-Nordfjordeid</Name>
+							<PublicCode>14-771</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-781">
+							<Name>14-781 Stryn-Grodås</Name>
+							<PublicCode>14-781</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-782">
+							<Name>14-782 Hornindal-Nordfjordeid</Name>
+							<PublicCode>14-782</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-811">
+							<Name>14-811 Nordfjordeid-Heggjabygda-Navelsaker</Name>
+							<PublicCode>14-811</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-813">
+							<Name>14-813 Nordfjordeid-Remmedalen-Stårheim</Name>
+							<PublicCode>14-813</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-816">
+							<Name>14-816 Nordfjordeid-Torheim</Name>
+							<PublicCode>14-816</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-841">
+							<Name>14-841 Husevågøy-Måløy</Name>
+							<PublicCode>14-841</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-851">
+							<Name>14-851 Måløy-Osmundsvåg</Name>
+							<PublicCode>14-851</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-852">
+							<Name>14-852 Måløy-Raudeberg-Kvalheim</Name>
+							<PublicCode>14-852</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-853">
+							<Name>14-853 Måløy-Oppedal</Name>
+							<PublicCode>14-853</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-871">
+							<Name>14-871 Måløy-Flatraket-Selje</Name>
+							<PublicCode>14-871</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-872">
+							<Name>14-872 Selje-Leikanger</Name>
+							<PublicCode>14-872</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-874">
+							<Name>14-874 Leikanger-Åheim-Bryggja-Nordfjordeid</Name>
+							<PublicCode>14-874</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-876">
+							<Name>14-876 Leikanger-Hoddevik</Name>
+							<PublicCode>14-876</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-877">
+							<Name>14-877 Leikanger-Honningsvåg</Name>
+							<PublicCode>14-877</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-878">
+							<Name>14-878 Leikanger-Eltvik</Name>
+							<PublicCode>14-878</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-179">
+							<Name>23-179 Fagernes-Tyinkrysset-Årdal/Lærdal</Name>
+							<PublicCode>23-179</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-190">
+							<Name>23-190 Otta-Lom-Sogndal</Name>
+							<PublicCode>23-190</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-490">
+							<Name>23-490 Gudvangen-Flåm-Aurlandsdalen-Hallingdal</Name>
+							<PublicCode>23-490</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-495">
+							<Name>23-495 Oppedal-Brekke-Dalsøyra-Sløvåg</Name>
+							<PublicCode>23-495</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-503">
+							<Name>23-503 Sogndal-Vik-Voss-Bergen</Name>
+							<PublicCode>23-503</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-504">
+							<Name>23-504 Sogndal-Lavik-Bergen</Name>
+							<PublicCode>23-504</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-505">
+							<Name>23-505 Måløy-Nordfjordeid-Førde</Name>
+							<PublicCode>23-505</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-506">
+							<Name>23-506 Førde-Vadheim-Lavik-Rysjedalsvika</Name>
+							<PublicCode>23-506</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-516">
+							<Name>23-516 Førde-Vadheim-Høyanger-Sogndal</Name>
+							<PublicCode>23-516</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-517">
+							<Name>23-517 Førde-Skei-Fjærland-Sogndal</Name>
+							<PublicCode>23-517</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-520">
+							<Name>23-520 Førde-Stryn-Ålesund</Name>
+							<PublicCode>23-520</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-521">
+							<Name>23-521 Ålesund-Stryn-Sogndal</Name>
+							<PublicCode>23-521</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-522">
+							<Name>23-522 Måløy-Nordfjordeid-Sandane-Skei-Sogndal</Name>
+							<PublicCode>23-522</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-523">
+							<Name>23-523 Ålesund-Nordfjordeid-Skei-Sogndal</Name>
+							<PublicCode>23-523</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-526">
+							<Name>23-526 Lærdal/Øvre Årdal-Sogndal Førde</Name>
+							<PublicCode>23-526</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-527">
+							<Name>23-527 Selje/Raudeberg-Måløy-Nordfjordeid-Førde</Name>
+							<PublicCode>23-527</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-528">
+							<Name>23-528 Turistrute Flåm - Hellesylt</Name>
+							<PublicCode>23-528</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-544">
+							<Name>23-544 Stryn-Nordfjordeid-Måløy</Name>
+							<PublicCode>23-544</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:23-553">
+							<Name>23-553 Stryn-Grodås-Volda-Ørsta</Name>
+							<PublicCode>23-553</PublicCode>
+						</Line>
+
+						<!-- Bybussruter -->
+
+						<Line version="1" id="SOF:Line:14-441">
+							<Name>14-441 Bybuss i Førde</Name>
+							<PublicCode>14-441</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-646">
+							<Name>14-646 Bybuss i Florø (BYBUSS 1)</Name>
+							<PublicCode>14-646</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-647">
+							<Name>14-647 Bybuss i Florø (BYBUSS 2)</Name>
+							<PublicCode>14-647</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-648">
+							<Name>14-648 Bybuss i Florø (Arbeidsrute Verftet/Botnaneset)</Name>
+							<PublicCode>14-648</PublicCode>
+						</Line>
+
+						<!-- Flybussruter -->
+
+						<Line version="1" id="SOF:Line:26-311">
+							<Name>26-311 Sogndal-Sogndal l.h. Haukåsen</Name>
+							<PublicCode>26-311</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:26-312">
+							<Name>26-312 Førde-Bringeland Flybussen</Name>
+							<PublicCode>26-312</PublicCode>
+						</Line>
+
+						<!-- Servicelinjer -->
+
+
+						<!-- Hurtigbåtruter -->
+
+						<!-- Ferjeruter -->
+
+						<Line version="1" id="SOF:Line:14-107">
+							<Name>14-107 Fodnes-Mannheller</Name>
+							<PublicCode>14-107</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-147">
+							<Name>14-147 Solvorn-Ornes</Name>
+							<PublicCode>14-147</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-156">
+							<Name>14-156 Kaupanger kai-Frønningen</Name>
+							<PublicCode>14-156</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-171">
+							<Name>14-171 Hella-Vangsnes</Name>
+							<PublicCode>14-171</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-172">
+							<Name>14-172 Dragsvik-Vangsnes</Name>
+							<PublicCode>14-172</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-173">
+							<Name>14-173 Hella-Dragsvik</Name>
+							<PublicCode>14-173</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-185">
+							<Name>14-185 Vik-Ortnevik</Name>
+							<PublicCode>14-185</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-242">
+							<Name>14-242 Ortnevik-Måren-Nordeide</Name>
+							<PublicCode>14-242</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-251">
+							<Name>14-251 Lavik-Oppedal</Name>
+							<PublicCode>14-251</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-316">
+							<Name>14-316 Kabelferje Hisarøy</Name>
+							<PublicCode>14-316</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-321">
+							<Name>14-321 Rysjedalsvika-Rutledal-Krakhella</Name>
+							<PublicCode>14-321</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-331">
+							<Name>14-331 Daløy-Haldorsneset</Name>
+							<PublicCode>14-331</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-431">
+							<Name>14-431 Askvoll-Gjervik-Fure-Askvoll</Name>
+							<PublicCode>14-431</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-434">
+							<Name>14-434 Askvoll-Fure-Værlandet</Name>
+							<PublicCode>14-434</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-669">
+							<Name>14-669 Oldeide-Måløy</Name>
+							<PublicCode>14-669</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-814">
+							<Name>14-814 Stårheim-Isane</Name>
+							<PublicCode>14-814</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-817">
+							<Name>14-817 Lote-Anda</Name>
+							<PublicCode>14-817</PublicCode>
+						</Line>
+						<Line version="1" id="SOF:Line:14-873">
+							<Name>14-873 Barmen-Barmsund</Name>
+							<PublicCode>14-873</PublicCode>
+						</Line>
+					</lines>
+					<!--- === GROUPs OF LINEs ========= -->
+					<groupsOfLines>
+						<GroupOfLines version="1" id="SOF:GroupOfLines:1">
+							<Name>Lokalbussruter Sogn og Fjordane</Name>
+							<members>
+								<LineRef version="1" ref="SOF:Line:14-101"/>
+								<LineRef version="1" ref="SOF:Line:14-102"/>
+								<LineRef version="1" ref="SOF:Line:14-103"/>
+								<LineRef version="1" ref="SOF:Line:14-109"/>
+								<LineRef version="1" ref="SOF:Line:14-111"/>
+								<LineRef version="1" ref="SOF:Line:14-122"/>
+								<LineRef version="1" ref="SOF:Line:14-123"/>
+								<LineRef version="1" ref="SOF:Line:14-125"/>
+								<LineRef version="1" ref="SOF:Line:14-126"/>
+								<LineRef version="1" ref="SOF:Line:14-131"/>
+								<LineRef version="1" ref="SOF:Line:14-144"/>
+								<LineRef version="1" ref="SOF:Line:14-146"/>
+								<LineRef version="1" ref="SOF:Line:14-151"/>
+								<LineRef version="1" ref="SOF:Line:14-152"/>
+								<LineRef version="1" ref="SOF:Line:14-153"/>
+								<LineRef version="1" ref="SOF:Line:14-154"/>
+								<LineRef version="1" ref="SOF:Line:14-159"/>
+								<LineRef version="1" ref="SOF:Line:14-161"/>
+								<LineRef version="1" ref="SOF:Line:14-162"/>
+								<LineRef version="1" ref="SOF:Line:14-163"/>
+								<LineRef version="1" ref="SOF:Line:14-181"/>
+								<LineRef version="1" ref="SOF:Line:14-182"/>
+								<LineRef version="1" ref="SOF:Line:14-183"/>
+								<LineRef version="1" ref="SOF:Line:14-184"/>
+								<LineRef version="1" ref="SOF:Line:14-542"/>
+								<LineRef version="1" ref="SOF:Line:14-543"/>
+								<LineRef version="1" ref="SOF:Line:14-211"/>
+								<LineRef version="1" ref="SOF:Line:14-221"/>
+								<LineRef version="1" ref="SOF:Line:14-222"/>
+								<LineRef version="1" ref="SOF:Line:14-226"/>
+								<LineRef version="1" ref="SOF:Line:14-241"/>
+								<LineRef version="1" ref="SOF:Line:14-246"/>
+								<LineRef version="1" ref="SOF:Line:14-311"/>
+								<LineRef version="1" ref="SOF:Line:14-312"/>
+								<LineRef version="1" ref="SOF:Line:14-313"/>
+								<LineRef version="1" ref="SOF:Line:14-315"/>
+								<LineRef version="1" ref="SOF:Line:14-324"/>
+								<LineRef version="1" ref="SOF:Line:14-325"/>
+								<LineRef version="1" ref="SOF:Line:14-332"/>
+								<LineRef version="1" ref="SOF:Line:14-341"/>
+								<LineRef version="1" ref="SOF:Line:14-342"/>
+								<LineRef version="1" ref="SOF:Line:14-343"/>
+								<LineRef version="1" ref="SOF:Line:14-344"/>
+								<LineRef version="1" ref="SOF:Line:14-345"/>
+								<LineRef version="1" ref="SOF:Line:14-346"/>
+								<LineRef version="1" ref="SOF:Line:14-347"/>
+								<LineRef version="1" ref="SOF:Line:14-401"/>
+								<LineRef version="1" ref="SOF:Line:14-402"/>
+								<LineRef version="1" ref="SOF:Line:14-411"/>
+								<LineRef version="1" ref="SOF:Line:14-412"/>
+								<LineRef version="1" ref="SOF:Line:14-414"/>
+								<LineRef version="1" ref="SOF:Line:14-421"/>
+								<LineRef version="1" ref="SOF:Line:14-422"/>
+								<LineRef version="1" ref="SOF:Line:14-423"/>
+								<LineRef version="1" ref="SOF:Line:14-424"/>
+								<LineRef version="1" ref="SOF:Line:14-432"/>
+								<LineRef version="1" ref="SOF:Line:14-433"/>
+								<LineRef version="1" ref="SOF:Line:14-436"/>
+								<LineRef version="1" ref="SOF:Line:14-511"/>
+								<LineRef version="1" ref="SOF:Line:14-512"/>
+								<LineRef version="1" ref="SOF:Line:14-513"/>
+								<LineRef version="1" ref="SOF:Line:14-521"/>
+								<LineRef version="1" ref="SOF:Line:14-522"/>
+								<LineRef version="1" ref="SOF:Line:14-523"/>
+								<LineRef version="1" ref="SOF:Line:14-531"/>
+								<LineRef version="1" ref="SOF:Line:14-532"/>
+								<LineRef version="1" ref="SOF:Line:14-533"/>
+								<LineRef version="1" ref="SOF:Line:14-534"/>
+								<LineRef version="1" ref="SOF:Line:14-541"/>
+								<LineRef version="1" ref="SOF:Line:14-551"/>
+								<LineRef version="1" ref="SOF:Line:14-601"/>
+								<LineRef version="1" ref="SOF:Line:14-602"/>
+								<LineRef version="1" ref="SOF:Line:14-611"/>
+								<LineRef version="1" ref="SOF:Line:14-612"/>
+								<LineRef version="1" ref="SOF:Line:14-621"/>
+								<LineRef version="1" ref="SOF:Line:14-622"/>
+								<LineRef version="1" ref="SOF:Line:14-623"/>
+								<LineRef version="1" ref="SOF:Line:14-635"/>
+								<LineRef version="1" ref="SOF:Line:14-638"/>
+								<LineRef version="1" ref="SOF:Line:14-651"/>
+								<LineRef version="1" ref="SOF:Line:14-652"/>
+								<LineRef version="1" ref="SOF:Line:14-653"/>
+								<LineRef version="1" ref="SOF:Line:14-654"/>
+								<LineRef version="1" ref="SOF:Line:14-655"/>
+								<LineRef version="1" ref="SOF:Line:14-656"/>
+								<LineRef version="1" ref="SOF:Line:14-657"/>
+								<LineRef version="1" ref="SOF:Line:14-663"/>
+								<LineRef version="1" ref="SOF:Line:14-667"/>
+								<LineRef version="1" ref="SOF:Line:14-701"/>
+								<LineRef version="1" ref="SOF:Line:14-702"/>
+								<LineRef version="1" ref="SOF:Line:14-703"/>
+								<LineRef version="1" ref="SOF:Line:14-711"/>
+								<LineRef version="1" ref="SOF:Line:14-712"/>
+								<LineRef version="1" ref="SOF:Line:14-713"/>
+								<LineRef version="1" ref="SOF:Line:14-721"/>
+								<LineRef version="1" ref="SOF:Line:14-722"/>
+								<LineRef version="1" ref="SOF:Line:14-724"/>
+								<LineRef version="1" ref="SOF:Line:14-726"/>
+								<LineRef version="1" ref="SOF:Line:14-727"/>
+								<LineRef version="1" ref="SOF:Line:14-728"/>
+								<LineRef version="1" ref="SOF:Line:14-751"/>
+								<LineRef version="1" ref="SOF:Line:14-752"/>
+								<LineRef version="1" ref="SOF:Line:14-761"/>
+								<LineRef version="1" ref="SOF:Line:14-762"/>
+								<LineRef version="1" ref="SOF:Line:14-771"/>
+								<LineRef version="1" ref="SOF:Line:14-781"/>
+								<LineRef version="1" ref="SOF:Line:14-782"/>
+								<LineRef version="1" ref="SOF:Line:14-811"/>
+								<LineRef version="1" ref="SOF:Line:14-813"/>
+								<LineRef version="1" ref="SOF:Line:14-816"/>
+								<LineRef version="1" ref="SOF:Line:14-841"/>
+								<LineRef version="1" ref="SOF:Line:14-851"/>
+								<LineRef version="1" ref="SOF:Line:14-852"/>
+								<LineRef version="1" ref="SOF:Line:14-853"/>
+								<LineRef version="1" ref="SOF:Line:14-871"/>
+								<LineRef version="1" ref="SOF:Line:14-872"/>
+								<LineRef version="1" ref="SOF:Line:14-874"/>
+								<LineRef version="1" ref="SOF:Line:14-876"/>
+								<LineRef version="1" ref="SOF:Line:14-877"/>
+								<LineRef version="1" ref="SOF:Line:14-878"/>
+								<LineRef version="1" ref="SOF:Line:23-179"/>
+								<LineRef version="1" ref="SOF:Line:23-190"/>
+								<LineRef version="1" ref="SOF:Line:23-490"/>
+								<LineRef version="1" ref="SOF:Line:23-495"/>
+								<LineRef version="1" ref="SOF:Line:23-503"/>
+								<LineRef version="1" ref="SOF:Line:23-504"/>
+								<LineRef version="1" ref="SOF:Line:23-505"/>
+								<LineRef version="1" ref="SOF:Line:23-506"/>
+								<LineRef version="1" ref="SOF:Line:23-516"/>
+								<LineRef version="1" ref="SOF:Line:23-517"/>
+								<LineRef version="1" ref="SOF:Line:23-520"/>
+								<LineRef version="1" ref="SOF:Line:23-521"/>
+								<LineRef version="1" ref="SOF:Line:23-522"/>
+								<LineRef version="1" ref="SOF:Line:23-523"/>
+								<LineRef version="1" ref="SOF:Line:23-526"/>
+								<LineRef version="1" ref="SOF:Line:23-527"/>
+								<LineRef version="1" ref="SOF:Line:23-528"/>
+								<LineRef version="1" ref="SOF:Line:23-544"/>
+								<LineRef version="1" ref="SOF:Line:23-553"/>
+								<!-- Ferjeruter i bussruter -->
+								<LineRef version="1" ref="SOF:Line:14-107"/>
+								<LineRef version="1" ref="SOF:Line:14-171"/>
+								<LineRef version="1" ref="SOF:Line:14-172"/>
+								<LineRef version="1" ref="SOF:Line:14-173"/>
+								<LineRef version="1" ref="SOF:Line:14-242"/>
+								<LineRef version="1" ref="SOF:Line:14-251"/>
+								<LineRef version="1" ref="SOF:Line:14-669"/>
+								<LineRef version="1" ref="SOF:Line:14-814"/>
+								<LineRef version="1" ref="SOF:Line:14-817"/>
+							</members>
+						</GroupOfLines>
+						<GroupOfLines version="1" id="SOF:GroupOfLines:2">
+							<Name>Lokalbussruter Sogn og Fjordane</Name>
+							<members>
+								<LineRef version="1" ref="SOF:Line:14-101"/>
+								<LineRef version="1" ref="SOF:Line:14-102"/>
+								<LineRef version="1" ref="SOF:Line:14-103"/>
+								<LineRef version="1" ref="SOF:Line:14-109"/>
+								<LineRef version="1" ref="SOF:Line:14-111"/>
+								<LineRef version="1" ref="SOF:Line:14-122"/>
+								<LineRef version="1" ref="SOF:Line:14-123"/>
+								<LineRef version="1" ref="SOF:Line:14-125"/>
+								<LineRef version="1" ref="SOF:Line:14-126"/>
+								<LineRef version="1" ref="SOF:Line:14-131"/>
+								<LineRef version="1" ref="SOF:Line:14-144"/>
+								<LineRef version="1" ref="SOF:Line:14-146"/>
+								<LineRef version="1" ref="SOF:Line:14-151"/>
+								<LineRef version="1" ref="SOF:Line:14-152"/>
+								<LineRef version="1" ref="SOF:Line:14-153"/>
+								<LineRef version="1" ref="SOF:Line:14-154"/>
+								<LineRef version="1" ref="SOF:Line:14-159"/>
+								<LineRef version="1" ref="SOF:Line:14-161"/>
+								<LineRef version="1" ref="SOF:Line:14-162"/>
+								<LineRef version="1" ref="SOF:Line:14-163"/>
+								<LineRef version="1" ref="SOF:Line:14-181"/>
+								<LineRef version="1" ref="SOF:Line:14-182"/>
+								<LineRef version="1" ref="SOF:Line:14-183"/>
+								<LineRef version="1" ref="SOF:Line:14-184"/>
+								<LineRef version="1" ref="SOF:Line:14-542"/>
+								<LineRef version="1" ref="SOF:Line:14-543"/>
+								<LineRef version="1" ref="SOF:Line:14-211"/>
+								<LineRef version="1" ref="SOF:Line:14-221"/>
+								<LineRef version="1" ref="SOF:Line:14-222"/>
+								<LineRef version="1" ref="SOF:Line:14-226"/>
+								<LineRef version="1" ref="SOF:Line:14-241"/>
+								<LineRef version="1" ref="SOF:Line:14-246"/>
+								<LineRef version="1" ref="SOF:Line:14-311"/>
+								<LineRef version="1" ref="SOF:Line:14-312"/>
+								<LineRef version="1" ref="SOF:Line:14-313"/>
+								<LineRef version="1" ref="SOF:Line:14-315"/>
+								<LineRef version="1" ref="SOF:Line:14-324"/>
+								<LineRef version="1" ref="SOF:Line:14-325"/>
+								<LineRef version="1" ref="SOF:Line:14-332"/>
+								<LineRef version="1" ref="SOF:Line:14-341"/>
+								<LineRef version="1" ref="SOF:Line:14-342"/>
+								<LineRef version="1" ref="SOF:Line:14-343"/>
+								<LineRef version="1" ref="SOF:Line:14-344"/>
+								<LineRef version="1" ref="SOF:Line:14-345"/>
+								<LineRef version="1" ref="SOF:Line:14-346"/>
+								<LineRef version="1" ref="SOF:Line:14-347"/>
+								<LineRef version="1" ref="SOF:Line:14-401"/>
+								<LineRef version="1" ref="SOF:Line:14-402"/>
+								<LineRef version="1" ref="SOF:Line:14-411"/>
+								<LineRef version="1" ref="SOF:Line:14-412"/>
+								<LineRef version="1" ref="SOF:Line:14-414"/>
+								<LineRef version="1" ref="SOF:Line:14-421"/>
+								<LineRef version="1" ref="SOF:Line:14-422"/>
+								<LineRef version="1" ref="SOF:Line:14-423"/>
+								<LineRef version="1" ref="SOF:Line:14-424"/>
+								<LineRef version="1" ref="SOF:Line:14-432"/>
+								<LineRef version="1" ref="SOF:Line:14-433"/>
+								<LineRef version="1" ref="SOF:Line:14-436"/>
+								<LineRef version="1" ref="SOF:Line:14-511"/>
+								<LineRef version="1" ref="SOF:Line:14-512"/>
+								<LineRef version="1" ref="SOF:Line:14-513"/>
+								<LineRef version="1" ref="SOF:Line:14-521"/>
+								<LineRef version="1" ref="SOF:Line:14-522"/>
+								<LineRef version="1" ref="SOF:Line:14-523"/>
+								<LineRef version="1" ref="SOF:Line:14-531"/>
+								<LineRef version="1" ref="SOF:Line:14-532"/>
+								<LineRef version="1" ref="SOF:Line:14-533"/>
+								<LineRef version="1" ref="SOF:Line:14-534"/>
+								<LineRef version="1" ref="SOF:Line:14-541"/>
+								<LineRef version="1" ref="SOF:Line:14-551"/>
+								<LineRef version="1" ref="SOF:Line:14-601"/>
+								<LineRef version="1" ref="SOF:Line:14-602"/>
+								<LineRef version="1" ref="SOF:Line:14-611"/>
+								<LineRef version="1" ref="SOF:Line:14-612"/>
+								<LineRef version="1" ref="SOF:Line:14-621"/>
+								<LineRef version="1" ref="SOF:Line:14-622"/>
+								<LineRef version="1" ref="SOF:Line:14-623"/>
+								<LineRef version="1" ref="SOF:Line:14-635"/>
+								<LineRef version="1" ref="SOF:Line:14-638"/>
+								<LineRef version="1" ref="SOF:Line:14-651"/>
+								<LineRef version="1" ref="SOF:Line:14-652"/>
+								<LineRef version="1" ref="SOF:Line:14-653"/>
+								<LineRef version="1" ref="SOF:Line:14-654"/>
+								<LineRef version="1" ref="SOF:Line:14-655"/>
+								<LineRef version="1" ref="SOF:Line:14-656"/>
+								<LineRef version="1" ref="SOF:Line:14-657"/>
+								<LineRef version="1" ref="SOF:Line:14-663"/>
+								<LineRef version="1" ref="SOF:Line:14-667"/>
+								<LineRef version="1" ref="SOF:Line:14-701"/>
+								<LineRef version="1" ref="SOF:Line:14-702"/>
+								<LineRef version="1" ref="SOF:Line:14-703"/>
+								<LineRef version="1" ref="SOF:Line:14-711"/>
+								<LineRef version="1" ref="SOF:Line:14-712"/>
+								<LineRef version="1" ref="SOF:Line:14-713"/>
+								<LineRef version="1" ref="SOF:Line:14-721"/>
+								<LineRef version="1" ref="SOF:Line:14-722"/>
+								<LineRef version="1" ref="SOF:Line:14-724"/>
+								<LineRef version="1" ref="SOF:Line:14-726"/>
+								<LineRef version="1" ref="SOF:Line:14-727"/>
+								<LineRef version="1" ref="SOF:Line:14-728"/>
+								<LineRef version="1" ref="SOF:Line:14-751"/>
+								<LineRef version="1" ref="SOF:Line:14-752"/>
+								<LineRef version="1" ref="SOF:Line:14-761"/>
+								<LineRef version="1" ref="SOF:Line:14-762"/>
+								<LineRef version="1" ref="SOF:Line:14-771"/>
+								<LineRef version="1" ref="SOF:Line:14-781"/>
+								<LineRef version="1" ref="SOF:Line:14-782"/>
+								<LineRef version="1" ref="SOF:Line:14-811"/>
+								<LineRef version="1" ref="SOF:Line:14-813"/>
+								<LineRef version="1" ref="SOF:Line:14-816"/>
+								<LineRef version="1" ref="SOF:Line:14-841"/>
+								<LineRef version="1" ref="SOF:Line:14-851"/>
+								<LineRef version="1" ref="SOF:Line:14-852"/>
+								<LineRef version="1" ref="SOF:Line:14-853"/>
+								<LineRef version="1" ref="SOF:Line:14-871"/>
+								<LineRef version="1" ref="SOF:Line:14-872"/>
+								<LineRef version="1" ref="SOF:Line:14-874"/>
+								<LineRef version="1" ref="SOF:Line:14-876"/>
+								<LineRef version="1" ref="SOF:Line:14-877"/>
+								<LineRef version="1" ref="SOF:Line:14-878"/>
+								<LineRef version="1" ref="SOF:Line:23-179"/>
+								<LineRef version="1" ref="SOF:Line:23-190"/>
+								<LineRef version="1" ref="SOF:Line:23-490"/>
+								<LineRef version="1" ref="SOF:Line:23-495"/>
+								<LineRef version="1" ref="SOF:Line:23-503"/>
+								<LineRef version="1" ref="SOF:Line:23-504"/>
+								<LineRef version="1" ref="SOF:Line:23-505"/>
+								<LineRef version="1" ref="SOF:Line:23-506"/>
+								<LineRef version="1" ref="SOF:Line:23-516"/>
+								<LineRef version="1" ref="SOF:Line:23-517"/>
+								<LineRef version="1" ref="SOF:Line:23-520"/>
+								<LineRef version="1" ref="SOF:Line:23-521"/>
+								<LineRef version="1" ref="SOF:Line:23-522"/>
+								<LineRef version="1" ref="SOF:Line:23-523"/>
+								<LineRef version="1" ref="SOF:Line:23-526"/>
+								<LineRef version="1" ref="SOF:Line:23-527"/>
+								<LineRef version="1" ref="SOF:Line:23-528"/>
+								<LineRef version="1" ref="SOF:Line:23-544"/>
+								<LineRef version="1" ref="SOF:Line:23-553"/>
+							</members>
+						</GroupOfLines>
+						<GroupOfLines version="1" id="SOF:GroupOfLines:3">
+							<Name>Ferjeruter i bussruter</Name>
+							<members>
+								<LineRef version="1" ref="SOF:Line:14-107"/>
+								<LineRef version="1" ref="SOF:Line:14-171"/>
+								<LineRef version="1" ref="SOF:Line:14-172"/>
+								<LineRef version="1" ref="SOF:Line:14-173"/>
+								<LineRef version="1" ref="SOF:Line:14-242"/>
+								<LineRef version="1" ref="SOF:Line:14-251"/>
+								<LineRef version="1" ref="SOF:Line:14-669"/>
+								<LineRef version="1" ref="SOF:Line:14-814"/>
+								<LineRef version="1" ref="SOF:Line:14-817"/>
+							</members>
+						</GroupOfLines>
+						<GroupOfLines version="1" id="SOF:GroupOfLines:4">
+							<Name>Byruter Førde og Florø</Name>
+							<members>
+								<LineRef version="1" ref="SOF:Line:14-441"/>
+								<LineRef version="1" ref="SOF:Line:14-646"/>
+								<LineRef version="1" ref="SOF:Line:14-647"/>
+								<LineRef version="1" ref="SOF:Line:14-648"/>
+							</members>
+						</GroupOfLines>
+					</groupsOfLines>
+				</ServiceFrame>
+
+				<FareFrame version="1" id="SOF:FareFrame:Sogn og Fjordane">
+
+					<FrameDefaults>
+						<DefaultCurrency>NOK</DefaultCurrency>
+					</FrameDefaults>
+
+					<!-- Prisenhet (NOK)/Price unit -->
+
+					<PricingParameterSet id="SOF:PricingParameterSet:Finnmark" version="1">
+						<priceUnits id="SOF:priceUnits:1">
+							<PriceUnit id="SOF:PriceUnit:NOK" version="1">
+								<Name>Norske kroner</Name>
+								<Precision>0</Precision>
+							</PriceUnit>
+						</priceUnits>
+					</PricingParameterSet>
+
+					<!-- Geografisk enhet/Geographical unit (km)  -->
+
+					<geographicalUnits id="SOF:geographicalUnits:km">
+						<GeographicalUnit id="SOF:GeographicalUnit:km3" version="1">
+							<Name>3km-soner</Name>
+							<Distance>3</Distance>
+						</GeographicalUnit>
+						<GeographicalUnit id="SOF:GeographicalUnit:km6" version="1">
+							<Name>6km-soner</Name>
+							<Distance>6</Distance>
+						</GeographicalUnit>
+					</geographicalUnits>
+
+					<!-- Takstregulativ/Fare table -->
+
+					<geographicalIntervals id="SOF:geographicalIntervals:oneWayTicketBus">
+						
+						<!-- Busstakster 2018 -->
+						
+						<GeographicalInterval id="SOF:geographicalInterval:Sone1" version="1">
+							<Name>Sone 1</Name>
+							<StartGeographicalValue>0.1</StartGeographicalValue>
+							<EndGeographicalValue>3</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice id="SOF:GeographicalIntervalPrice:0.1-3km" version="1">
+									<Amount>31</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone2" version="1">
+							<Name>Sone 2</Name>
+							<StartGeographicalValue>3.1</StartGeographicalValue>
+							<EndGeographicalValue>6</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:3.1-6km" version="1">
+									<Amount>31</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone3" version="1">
+							<Name>Sone 3</Name>
+							<StartGeographicalValue>6.1</StartGeographicalValue>
+							<EndGeographicalValue>9</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice id="SOF:GeographicalIntervalPrice:6.1-9km" version="1">
+									<Amount>37</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone4" version="1">
+							<Name>Sone 4</Name>
+							<StartGeographicalValue>9.1</StartGeographicalValue>
+							<EndGeographicalValue>12</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice id="SOF:GeographicalIntervalPrice:9.1-12km" version="1">
+									<Amount>41</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone5" version="1">
+							<Name>Sone 5</Name>
+							<StartGeographicalValue>12.1</StartGeographicalValue>
+							<EndGeographicalValue>15</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:12.1-15km" version="1">
+									<Amount>48</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone6" version="1">
+							<Name>Sone 6</Name>
+							<StartGeographicalValue>15.1</StartGeographicalValue>
+							<EndGeographicalValue>18</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:15.1-18km" version="1">
+									<Amount>53</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone7" version="1">
+							<Name>Sone 7</Name>
+							<StartGeographicalValue>18.1</StartGeographicalValue>
+							<EndGeographicalValue>21</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:18.1-21km" version="1">
+									<Amount>60</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone8" version="1">
+							<Name>Sone 8</Name>
+							<StartGeographicalValue>21.1</StartGeographicalValue>
+							<EndGeographicalValue>24</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:21.1-24km" version="1">
+									<Amount>68</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone9" version="1">
+							<Name>Sone 9</Name>
+							<StartGeographicalValue>24.1</StartGeographicalValue>
+							<EndGeographicalValue>27</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:24.1-27km" version="1">
+									<Amount>74</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone10" version="1">
+							<Name>Sone 10</Name>
+							<StartGeographicalValue>27.1</StartGeographicalValue>
+							<EndGeographicalValue>30</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:27.1-30km" version="1">
+									<Amount>81</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone11" version="1">
+							<Name>Sone 11</Name>
+							<StartGeographicalValue>30.1</StartGeographicalValue>
+							<EndGeographicalValue>33</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:30.1-33km" version="1">
+									<Amount>87</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone12" version="1">
+							<Name>Sone 12</Name>
+							<StartGeographicalValue>33.1</StartGeographicalValue>
+							<EndGeographicalValue>36</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:33.1-36km" version="1">
+									<Amount>94</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone13" version="1">
+							<Name>Sone 13</Name>
+							<StartGeographicalValue>36.1</StartGeographicalValue>
+							<EndGeographicalValue>39</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:36.1-39km" version="1">
+									<Amount>101</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone14" version="1">
+							<Name>Sone 14</Name>
+							<StartGeographicalValue>39.1</StartGeographicalValue>
+							<EndGeographicalValue>42</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:39.1-42km" version="1">
+									<Amount>107</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone15" version="1">
+							<Name>Sone 15</Name>
+							<StartGeographicalValue>42.1</StartGeographicalValue>
+							<EndGeographicalValue>45</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:42.1-45km" version="1">
+									<Amount>114</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone16" version="1">
+							<Name>Sone 16</Name>
+							<StartGeographicalValue>45.1</StartGeographicalValue>
+							<EndGeographicalValue>48</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:45.1-48km" version="1">
+									<Amount>121</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone17" version="1">
+							<Name>Sone 17</Name>
+							<StartGeographicalValue>48.1</StartGeographicalValue>
+							<EndGeographicalValue>51</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:48.1-51km" version="1">
+									<Amount>128</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone18" version="1">
+							<Name>Sone 18</Name>
+							<StartGeographicalValue>51.1</StartGeographicalValue>
+							<EndGeographicalValue>54</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:51.1-54km" version="1">
+									<Amount>135</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone19" version="1">
+							<Name>Sone 19</Name>
+							<StartGeographicalValue>54.1</StartGeographicalValue>
+							<EndGeographicalValue>57</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:54.1-57km" version="1">
+									<Amount>141</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone20" version="1">
+							<Name>Sone 20</Name>
+							<StartGeographicalValue>57.1</StartGeographicalValue>
+							<EndGeographicalValue>60</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:57.1-60km" version="1">
+									<Amount>148</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone21" version="1">
+							<Name>Sone 21</Name>
+							<StartGeographicalValue>60.1</StartGeographicalValue>
+							<EndGeographicalValue>63</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:60.1-63km" version="1">
+									<Amount>155</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone22" version="1">
+							<Name>Sone 22</Name>
+							<StartGeographicalValue>63.1</StartGeographicalValue>
+							<EndGeographicalValue>66</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:63.1-66km" version="1">
+									<Amount>161</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone23" version="1">
+							<Name>Sone 23</Name>
+							<StartGeographicalValue>66.1</StartGeographicalValue>
+							<EndGeographicalValue>69</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:66.1-69km" version="1">
+									<Amount>168</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone24" version="1">
+							<Name>Sone 24</Name>
+							<StartGeographicalValue>69.1</StartGeographicalValue>
+							<EndGeographicalValue>72</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:69.1-72km" version="1">
+									<Amount>176</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone25" version="1">
+							<Name>Sone 25</Name>
+							<StartGeographicalValue>72.1</StartGeographicalValue>
+							<EndGeographicalValue>75</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:72.1-75km" version="1">
+									<Amount>182</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone26" version="1">
+							<Name>Sone 26</Name>
+							<StartGeographicalValue>75.1</StartGeographicalValue>
+							<EndGeographicalValue>78</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:75.1-78km" version="1">
+									<Amount>188</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone27" version="1">
+							<Name>Sone 27</Name>
+							<StartGeographicalValue>78.1</StartGeographicalValue>
+							<EndGeographicalValue>81</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:78.1-81km" version="1">
+									<Amount>196</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone28" version="1">
+							<Name>Sone 28</Name>
+							<StartGeographicalValue>81.1</StartGeographicalValue>
+							<EndGeographicalValue>84</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:81.1-84km" version="1">
+									<Amount>202</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone29" version="1">
+							<Name>Sone 29</Name>
+							<StartGeographicalValue>84.1</StartGeographicalValue>
+							<EndGeographicalValue>87</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:84.1-87km" version="1">
+									<Amount>209</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone30" version="1">
+							<Name>Sone 30</Name>
+							<StartGeographicalValue>87.1</StartGeographicalValue>
+							<EndGeographicalValue>90</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:87.1-90km" version="1">
+									<Amount>216</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone31" version="1">
+							<Name>Sone 31</Name>
+							<StartGeographicalValue>90.1</StartGeographicalValue>
+							<EndGeographicalValue>93</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:90.1-93km" version="1">
+									<Amount>222</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone32" version="1">
+							<Name>Sone 32</Name>
+							<StartGeographicalValue>93.1</StartGeographicalValue>
+							<EndGeographicalValue>96</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:93.1-96km" version="1">
+									<Amount>229</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone33" version="1">
+							<Name>Sone 33</Name>
+							<StartGeographicalValue>96.1</StartGeographicalValue>
+							<EndGeographicalValue>99</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:96.1-99km" version="1">
+									<Amount>235</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone34" version="1">
+							<Name>Sone 34</Name>
+							<StartGeographicalValue>99.1</StartGeographicalValue>
+							<EndGeographicalValue>102</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:99.1-102km" version="1">
+									<Amount>245</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone35" version="1">
+							<Name>Sone 35</Name>
+							<StartGeographicalValue>102.1</StartGeographicalValue>
+							<EndGeographicalValue>108</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:102.1-108km" version="1">
+									<Amount>255</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone36" version="1">
+							<Name>Sone 36</Name>
+							<StartGeographicalValue>108.1</StartGeographicalValue>
+							<EndGeographicalValue>114</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:108.1-114km" version="1">
+									<Amount>265</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone37" version="1">
+							<Name>Sone 37</Name>
+							<StartGeographicalValue>114.1</StartGeographicalValue>
+							<EndGeographicalValue>120</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:114.1-120km" version="1">
+									<Amount>280</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone38" version="1">
+							<Name>Sone 38</Name>
+							<StartGeographicalValue>120.1</StartGeographicalValue>
+							<EndGeographicalValue>126</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:120.1-126km" version="1">
+									<Amount>290</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone39" version="1">
+							<Name>Sone 39</Name>
+							<StartGeographicalValue>126.1</StartGeographicalValue>
+							<EndGeographicalValue>132</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:126.1-132km" version="1">
+									<Amount>300</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone40" version="1">
+							<Name>Sone 40</Name>
+							<StartGeographicalValue>132.1</StartGeographicalValue>
+							<EndGeographicalValue>138</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:132.1-138km" version="1">
+									<Amount>315</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone41" version="1">
+							<Name>Sone 41</Name>
+							<StartGeographicalValue>138.1</StartGeographicalValue>
+							<EndGeographicalValue>144</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:138.1-144km" version="1">
+									<Amount>325</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone42" version="1">
+							<Name>Sone 42</Name>
+							<StartGeographicalValue>144.1</StartGeographicalValue>
+							<EndGeographicalValue>150</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:144.1-150km" version="1">
+									<Amount>340</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone43" version="1">
+							<Name>Sone 43</Name>
+							<StartGeographicalValue>150.1</StartGeographicalValue>
+							<EndGeographicalValue>156</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:150.1-156km" version="1">
+									<Amount>350</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone44" version="1">
+							<Name>Sone 44</Name>
+							<StartGeographicalValue>156.1</StartGeographicalValue>
+							<EndGeographicalValue>162</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:156.1-162km" version="1">
+									<Amount>360</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone45" version="1">
+							<Name>Sone 45</Name>
+							<StartGeographicalValue>162.1</StartGeographicalValue>
+							<EndGeographicalValue>168</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:162.1-168km" version="1">
+									<Amount>370</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone46" version="1">
+							<Name>Sone 46</Name>
+							<StartGeographicalValue>168.1</StartGeographicalValue>
+							<EndGeographicalValue>174</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:168.1-174km" version="1">
+									<Amount>380</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone47" version="1">
+							<Name>Sone 47</Name>
+							<StartGeographicalValue>174.1</StartGeographicalValue>
+							<EndGeographicalValue>180</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:174.1-180km" version="1">
+									<Amount>390</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone48" version="1">
+							<Name>Sone 48</Name>
+							<StartGeographicalValue>180.1</StartGeographicalValue>
+							<EndGeographicalValue>186</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:180.1-186km" version="1">
+									<Amount>400</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone49" version="1">
+							<Name>Sone 49</Name>
+							<StartGeographicalValue>186.1</StartGeographicalValue>
+							<EndGeographicalValue>192</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:186.1-192km" version="1">
+									<Amount>405</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone50" version="1">
+							<Name>Sone 50</Name>
+							<StartGeographicalValue>192.1</StartGeographicalValue>
+							<EndGeographicalValue>198</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:192.1-198km" version="1">
+									<Amount>415</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone51" version="1">
+							<Name>Sone 51</Name>
+							<StartGeographicalValue>198.1</StartGeographicalValue>
+							<EndGeographicalValue>204</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:198.1-204km" version="1">
+									<Amount>425</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone52" version="1">
+							<Name>Sone 52</Name>
+							<StartGeographicalValue>204.1</StartGeographicalValue>
+							<EndGeographicalValue>210</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:204.1-210km" version="1">
+									<Amount>435</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						
+						<!-- Riksregulativet for ferjer 2018 -->
+						
+						<GeographicalInterval id="SOF:geographicalInterval:Sone1F" version="1">
+							<Name>Sone 1F</Name>
+							<StartGeographicalValue>0.1</StartGeographicalValue>
+							<EndGeographicalValue>3</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice id="SOF:GeographicalIntervalPrice:0.1-3kmF" version="1">
+									<Amount>31</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone2F" version="1">
+							<Name>Sone 2</Name>
+							<StartGeographicalValue>3.1</StartGeographicalValue>
+							<EndGeographicalValue>6</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:3.1-6kmF" version="1">
+									<Amount>31</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone3F" version="1">
+							<Name>Sone 3F</Name>
+							<StartGeographicalValue>6.1</StartGeographicalValue>
+							<EndGeographicalValue>9</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice id="SOF:GeographicalIntervalPrice:6.1-9kmF" version="1">
+									<Amount>37</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone4F" version="1">
+							<Name>Sone 4F</Name>
+							<StartGeographicalValue>9.1</StartGeographicalValue>
+							<EndGeographicalValue>12</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice id="SOF:GeographicalIntervalPrice:9.1-12kmF" version="1">
+									<Amount>41</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone5F" version="1">
+							<Name>Sone 5F</Name>
+							<StartGeographicalValue>12.1</StartGeographicalValue>
+							<EndGeographicalValue>15</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:12.1-15kmF" version="1">
+									<Amount>48</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone6F" version="1">
+							<Name>Sone 6F</Name>
+							<StartGeographicalValue>15.1</StartGeographicalValue>
+							<EndGeographicalValue>18</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:15.1-18kmF" version="1">
+									<Amount>53</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone7F" version="1">
+							<Name>Sone 7F</Name>
+							<StartGeographicalValue>18.1</StartGeographicalValue>
+							<EndGeographicalValue>21</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:18.1-21kmF" version="1">
+									<Amount>60</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone8F" version="1">
+							<Name>Sone 8F</Name>
+							<StartGeographicalValue>21.1</StartGeographicalValue>
+							<EndGeographicalValue>24</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:21.1-24kmF" version="1">
+									<Amount>68</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone9F" version="1">
+							<Name>Sone 9F</Name>
+							<StartGeographicalValue>24.1</StartGeographicalValue>
+							<EndGeographicalValue>27</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:24.1-27kmF" version="1">
+									<Amount>74</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone10F" version="1">
+							<Name>Sone 10</Name>
+							<StartGeographicalValue>27.1</StartGeographicalValue>
+							<EndGeographicalValue>30</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:27.1-30kmF" version="1">
+									<Amount>81</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone1F1" version="1">
+							<Name>Sone 11F</Name>
+							<StartGeographicalValue>30.1</StartGeographicalValue>
+							<EndGeographicalValue>33</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:30.1-33kmF" version="1">
+									<Amount>87</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone12F" version="1">
+							<Name>Sone 12F</Name>
+							<StartGeographicalValue>33.1</StartGeographicalValue>
+							<EndGeographicalValue>36</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:33.1-36kmF" version="1">
+									<Amount>94</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone13F" version="1">
+							<Name>Sone 13F</Name>
+							<StartGeographicalValue>36.1</StartGeographicalValue>
+							<EndGeographicalValue>39</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:36.1-39kmF" version="1">
+									<Amount>101</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone14F" version="1">
+							<Name>Sone 14</Name>
+							<StartGeographicalValue>39.1</StartGeographicalValue>
+							<EndGeographicalValue>42</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:39.1-42kmF" version="1">
+									<Amount>107</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone15F" version="1">
+							<Name>Sone 15F</Name>
+							<StartGeographicalValue>42.1</StartGeographicalValue>
+							<EndGeographicalValue>45</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:42.1-45kmF" version="1">
+									<Amount>114</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone16F" version="1">
+							<Name>Sone 16F</Name>
+							<StartGeographicalValue>45.1</StartGeographicalValue>
+							<EndGeographicalValue>48</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:45.1-48kmF" version="1">
+									<Amount>121</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone17F" version="1">
+							<Name>Sone 17F</Name>
+							<StartGeographicalValue>48.1</StartGeographicalValue>
+							<EndGeographicalValue>51</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:48.1-51kmF" version="1">
+									<Amount>128</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone18F" version="1">
+							<Name>Sone 18F</Name>
+							<StartGeographicalValue>51.1</StartGeographicalValue>
+							<EndGeographicalValue>54</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:51.1-54kmF" version="1">
+									<Amount>135</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone19F" version="1">
+							<Name>Sone 19F</Name>
+							<StartGeographicalValue>54.1</StartGeographicalValue>
+							<EndGeographicalValue>57</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:54.1-57kmF" version="1">
+									<Amount>141</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone20F" version="1">
+							<Name>Sone 20F</Name>
+							<StartGeographicalValue>57.1</StartGeographicalValue>
+							<EndGeographicalValue>60</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:57.1-60kmF" version="1">
+									<Amount>148</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone21F" version="1">
+							<Name>Sone 21F</Name>
+							<StartGeographicalValue>60.1</StartGeographicalValue>
+							<EndGeographicalValue>63</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:60.1-63kmF" version="1">
+									<Amount>155</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone22F" version="1">
+							<Name>Sone 22F</Name>
+							<StartGeographicalValue>63.1</StartGeographicalValue>
+							<EndGeographicalValue>66</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:63.1-66kmF" version="1">
+									<Amount>161</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone23F" version="1">
+							<Name>Sone 23F</Name>
+							<StartGeographicalValue>66.1</StartGeographicalValue>
+							<EndGeographicalValue>69</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:66.1-69kmF" version="1">
+									<Amount>168</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone24F" version="1">
+							<Name>Sone 24F</Name>
+							<StartGeographicalValue>69.1</StartGeographicalValue>
+							<EndGeographicalValue>72</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:69.1-72kmF" version="1">
+									<Amount>176</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone25F" version="1">
+							<Name>Sone 25F</Name>
+							<StartGeographicalValue>72.1</StartGeographicalValue>
+							<EndGeographicalValue>75</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:72.1-75kmF" version="1">
+									<Amount>182</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone26F" version="1">
+							<Name>Sone 26F</Name>
+							<StartGeographicalValue>75.1</StartGeographicalValue>
+							<EndGeographicalValue>78</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:75.1-78kmF" version="1">
+									<Amount>188</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone27F" version="1">
+							<Name>Sone 27F</Name>
+							<StartGeographicalValue>78.1</StartGeographicalValue>
+							<EndGeographicalValue>81</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:78.1-81kmF" version="1">
+									<Amount>196</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone28F" version="1">
+							<Name>Sone 28F</Name>
+							<StartGeographicalValue>81.1</StartGeographicalValue>
+							<EndGeographicalValue>84</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:81.1-84kmF" version="1">
+									<Amount>202</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone29F" version="1">
+							<Name>Sone 29F</Name>
+							<StartGeographicalValue>84.1</StartGeographicalValue>
+							<EndGeographicalValue>87</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:84.1-87kmF" version="1">
+									<Amount>209</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone30F" version="1">
+							<Name>Sone 30F</Name>
+							<StartGeographicalValue>87.1</StartGeographicalValue>
+							<EndGeographicalValue>90</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:87.1-90kmF" version="1">
+									<Amount>216</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone31F" version="1">
+							<Name>Sone 31F</Name>
+							<StartGeographicalValue>90.1</StartGeographicalValue>
+							<EndGeographicalValue>93</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:90.1-93kmF" version="1">
+									<Amount>222</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone32F" version="1">
+							<Name>Sone 32F</Name>
+							<StartGeographicalValue>93.1</StartGeographicalValue>
+							<EndGeographicalValue>96</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:93.1-96kmF" version="1">
+									<Amount>229</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone33F" version="1">
+							<Name>Sone 33F</Name>
+							<StartGeographicalValue>96.1</StartGeographicalValue>
+							<EndGeographicalValue>99</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:96.1-99kmF" version="1">
+									<Amount>235</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone34F" version="1">
+							<Name>Sone 34F</Name>
+							<StartGeographicalValue>99.1</StartGeographicalValue>
+							<EndGeographicalValue>102</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km3"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:99.1-102kmF" version="1">
+									<Amount>245</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone35F" version="1">
+							<Name>Sone 35F</Name>
+							<StartGeographicalValue>102.1</StartGeographicalValue>
+							<EndGeographicalValue>108</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:102.1-108kmF" version="1">
+									<Amount>255</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone36F" version="1">
+							<Name>Sone 36F</Name>
+							<StartGeographicalValue>108.1</StartGeographicalValue>
+							<EndGeographicalValue>114</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:108.1-114kmF" version="1">
+									<Amount>265</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone37F" version="1">
+							<Name>Sone 37F</Name>
+							<StartGeographicalValue>114.1</StartGeographicalValue>
+							<EndGeographicalValue>120</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:114.1-120kmF" version="1">
+									<Amount>280</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone38F" version="1">
+							<Name>Sone 38F</Name>
+							<StartGeographicalValue>120.1</StartGeographicalValue>
+							<EndGeographicalValue>126</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:120.1-126kmF" version="1">
+									<Amount>290</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone39F" version="1">
+							<Name>Sone 39F</Name>
+							<StartGeographicalValue>126.1</StartGeographicalValue>
+							<EndGeographicalValue>132</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:126.1-132kmF" version="1">
+									<Amount>300</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone40F" version="1">
+							<Name>Sone 40F</Name>
+							<StartGeographicalValue>132.1</StartGeographicalValue>
+							<EndGeographicalValue>138</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:132.1-138kmF" version="1">
+									<Amount>315</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone41F" version="1">
+							<Name>Sone 41F</Name>
+							<StartGeographicalValue>138.1</StartGeographicalValue>
+							<EndGeographicalValue>144</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:138.1-144kmF" version="1">
+									<Amount>325</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone42F" version="1">
+							<Name>Sone 42F</Name>
+							<StartGeographicalValue>144.1</StartGeographicalValue>
+							<EndGeographicalValue>150</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:144.1-150kmF" version="1">
+									<Amount>340</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone43F" version="1">
+							<Name>Sone 43F</Name>
+							<StartGeographicalValue>150.1</StartGeographicalValue>
+							<EndGeographicalValue>156</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:150.1-156kmF" version="1">
+									<Amount>350</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone44F" version="1">
+							<Name>Sone 44F</Name>
+							<StartGeographicalValue>156.1</StartGeographicalValue>
+							<EndGeographicalValue>162</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:156.1-162kmF" version="1">
+									<Amount>360</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone45F" version="1">
+							<Name>Sone 45F</Name>
+							<StartGeographicalValue>162.1</StartGeographicalValue>
+							<EndGeographicalValue>168</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:162.1-168kmF" version="1">
+									<Amount>370</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone46F" version="1">
+							<Name>Sone 46F</Name>
+							<StartGeographicalValue>168.1</StartGeographicalValue>
+							<EndGeographicalValue>174</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:168.1-174kmF" version="1">
+									<Amount>380</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone47F" version="1">
+							<Name>Sone 47F</Name>
+							<StartGeographicalValue>174.1</StartGeographicalValue>
+							<EndGeographicalValue>180</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:174.1-180kmF" version="1">
+									<Amount>390</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone48F" version="1">
+							<Name>Sone 48F</Name>
+							<StartGeographicalValue>180.1</StartGeographicalValue>
+							<EndGeographicalValue>186</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:180.1-186kmF" version="1">
+									<Amount>400</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone49F" version="1">
+							<Name>Sone 49F</Name>
+							<StartGeographicalValue>186.1</StartGeographicalValue>
+							<EndGeographicalValue>192</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:186.1-192kmF" version="1">
+									<Amount>405</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone50F" version="1">
+							<Name>Sone 50</Name>
+							<StartGeographicalValue>192.1</StartGeographicalValue>
+							<EndGeographicalValue>198</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:192.1-198kmF" version="1">
+									<Amount>415</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone51F" version="1">
+							<Name>Sone 51F</Name>
+							<StartGeographicalValue>198.1</StartGeographicalValue>
+							<EndGeographicalValue>204</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:198.1-204kmF" version="1">
+									<Amount>425</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+						<GeographicalInterval id="SOF:geographicalInterval:Sone52F" version="1">
+							<Name>Sone 52F</Name>
+							<StartGeographicalValue>204.1</StartGeographicalValue>
+							<EndGeographicalValue>210</EndGeographicalValue>
+							<NumberOfUnits>1</NumberOfUnits>
+							<IntervalType>distance</IntervalType>
+							<GeographicalUnitRef ref="SOF:GeographicalUnit:km6"/>
+							<prices>
+								<GeographicalIntervalPrice
+									id="SOF:GeographicalIntervalPrice:204.1-210kmF" version="1">
+									<Amount>435</Amount>
+								</GeographicalIntervalPrice>
+							</prices>
+						</GeographicalInterval>
+					</geographicalIntervals>
+
+					<geographicalStructureFactors id="SOF:geographicalStructureFactors:1">
+						<!-- Referanser til busstakster 2018 -->
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone1" version="1">
+							<Name>Sone 1</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone1"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone2" version="1">
+							<Name>Sone 2</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone2"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone3" version="1">
+							<Name>Sone 3</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone3"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone4" version="1">
+							<Name>Sone 4</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone4"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone5" version="1">
+							<Name>Sone 5</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone5"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone6" version="1">
+							<Name>Sone 6</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone6"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone7" version="1">
+							<Name>Sone 7</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone7"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone8" version="1">
+							<Name>Sone 8</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone8"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone9" version="1">
+							<Name>Sone 9</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone9"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone10" version="1">
+							<Name>Sone 10</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone10"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone11" version="1">
+							<Name>Sone 11</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone11"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone12" version="1">
+							<Name>Sone 12</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone12"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone13" version="1">
+							<Name>Sone 13</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone13"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone14" version="1">
+							<Name>Sone 14</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone14"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone15" version="1">
+							<Name>Sone 15</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone15"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone16" version="1">
+							<Name>Sone 16</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone16"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone17" version="1">
+							<Name>Sone 17</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone17"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone18" version="1">
+							<Name>Sone 18</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone18"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone19" version="1">
+							<Name>Sone 19</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone19"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone20" version="1">
+							<Name>Sone 20</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone20"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone21" version="1">
+							<Name>Sone 21</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone21"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone22" version="1">
+							<Name>Sone 22</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone22"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone23" version="1">
+							<Name>Sone 23</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone23"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone24" version="1">
+							<Name>Sone 24</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone24"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone25" version="1">
+							<Name>Sone 25</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone25"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone26" version="1">
+							<Name>Sone 26</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone26"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone27" version="1">
+							<Name>Sone 27</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone27"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone28" version="1">
+							<Name>Sone 28</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone28"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone29" version="1">
+							<Name>Sone 29</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone29"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone30" version="1">
+							<Name>Sone 30</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone30"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone31" version="1">
+							<Name>Sone 31</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone31"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone32" version="1">
+							<Name>Sone 32</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone32"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone33" version="1">
+							<Name>Sone 33</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone33"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone34" version="1">
+							<Name>Sone 34</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone34"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone35" version="1">
+							<Name>Sone 35</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone35"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone36" version="1">
+							<Name>Sone 36</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone36"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone37" version="1">
+							<Name>Sone 37</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone37"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone38" version="1">
+							<Name>Sone 38</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone38"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone39" version="1">
+							<Name>Sone 39</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone39"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone40" version="1">
+							<Name>Sone 40</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone40"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone41" version="1">
+							<Name>Sone 41</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone41"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone42" version="1">
+							<Name>Sone 42</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone42"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone43" version="1">
+							<Name>Sone 43</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone43"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone44" version="1">
+							<Name>Sone 44</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone44"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone45" version="1">
+							<Name>Sone 45</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone45"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone46" version="1">
+							<Name>Sone 46</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone46"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone47" version="1">
+							<Name>Sone 47</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone47"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone48" version="1">
+							<Name>Sone 48</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone48"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone49" version="1">
+							<Name>Sone 49</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone49"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone50" version="1">
+							<Name>Sone 50</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone50"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone51" version="1">
+							<Name>Sone 51</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone51"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone52" version="1">
+							<Name>Sone 52</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone52"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km6"/>
+						</GeographicalStructureFactor>
+						
+							<!-- Referanser til Riksregulativet for ferjer -->							
+
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone1F" version="1">
+							<Name>Sone 1</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone1F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone2F" version="1">
+							<Name>Sone 2</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone2F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone3F" version="1">
+							<Name>Sone 3</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone3F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone4F" version="1">
+							<Name>Sone 4</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone4F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone5F" version="1">
+							<Name>Sone 5</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone5F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone6F" version="1">
+							<Name>Sone 6</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone6F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone7F" version="1">
+							<Name>Sone 7</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone7F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone8F" version="1">
+							<Name>Sone 8</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone8F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone9F" version="1">
+							<Name>Sone 9</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone9F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone10F" version="1">
+							<Name>Sone 10</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone10F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone11F" version="1">
+							<Name>Sone 11</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone11"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone12F" version="1">
+							<Name>Sone 12</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone12F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone13F" version="1">
+							<Name>Sone 13</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone13F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone14F" version="1">
+							<Name>Sone 14</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone14F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone15F" version="1">
+							<Name>Sone 15</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone15F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone16F" version="1">
+							<Name>Sone 16</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone16F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone17F" version="1">
+							<Name>Sone 17</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone17F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone18F" version="1">
+							<Name>Sone 18</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone18F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone19F" version="1">
+							<Name>Sone 19</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone19F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone20F" version="1">
+							<Name>Sone 20</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone20F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone21F" version="1">
+							<Name>Sone 21</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone21"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone22F" version="1">
+							<Name>Sone 22</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone22F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone23F" version="1">
+							<Name>Sone 23</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone23F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone24F" version="1">
+							<Name>Sone 24</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone24F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone25F" version="1">
+							<Name>Sone 25</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone25F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone26F" version="1">
+							<Name>Sone 26</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone26F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone27F" version="1">
+							<Name>Sone 27</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone27F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone28F" version="1">
+							<Name>Sone 28</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone28F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone29F" version="1">
+							<Name>Sone 29</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone29F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone30F" version="1">
+							<Name>Sone 30</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone30F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone31F" version="1">
+							<Name>Sone 31</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone31F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone32F" version="1">
+							<Name>Sone 32</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone32"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone33F" version="1">
+							<Name>Sone 33</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone33F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone34F" version="1">
+							<Name>Sone 34</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone34F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone35F" version="1">
+							<Name>Sone 35</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone35F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone36F" version="1">
+							<Name>Sone 36</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone36F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone37F" version="1">
+							<Name>Sone 37</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone37F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone38F" version="1">
+							<Name>Sone 38</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone38F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone39F" version="1">
+							<Name>Sone 39</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone39F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone40F" version="1">
+							<Name>Sone 40</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone40F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone41F" version="1">
+							<Name>Sone 41</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone41F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone42F" version="1">
+							<Name>Sone 42</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone42F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone43F" version="1">
+							<Name>Sone 43</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone43F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone44F" version="1">
+							<Name>Sone 44</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone44F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone45F" version="1">
+							<Name>Sone 45</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone45F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone46F" version="1">
+							<Name>Sone 46</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone46F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone47F" version="1">
+							<Name>Sone 47</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone47F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone48F" version="1">
+							<Name>Sone 48</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone48F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone49F" version="1">
+							<Name>Sone 49</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone49F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone50F" version="1">
+							<Name>Sone 50</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone50F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone51F" version="1">
+							<Name>Sone 51</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone51F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+						<GeographicalStructureFactor id="SOF:GeographicalStructureFactor:Sone52F" version="1">
+							<Name>Sone 52</Name>
+							<GeographicalIntervalRef ref="SOF:geographicalInterval:Sone52F"/>
+							<GeographicalUnitRef ref="SOF:geographicalUnit:km3"/>
+						</GeographicalStructureFactor>
+					</geographicalStructureFactors>
+
+					<!-- Fare structure elements  -->
+
+					<fareStructureElements>
+						<FareStructureElement id="SOF:FareStructureElement:kmsoner" version="1">
+							<Name>Km-basert taksttabell for buss i Sogn og Fjordane 2018</Name>
+							<geographicalStructureFactors id="SOF:geographicalStructureFactors:1">
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone1"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone2"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone3"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone4"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone5"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone6"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone7"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone8"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone9"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone10"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone11"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone12"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone13"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone14"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone15"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone16"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone17"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone18"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone19"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone20"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone21"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone22"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone23"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone24"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone25"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone26"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone27"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone28"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone29"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone30"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone31"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone32"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone33"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone34"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone35"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone36"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone37"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone38"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone39"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone40"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone41"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone42"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone43"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone44"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone45"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone46"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone47"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone48"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone49"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone50"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone51"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone52"/>
+							</geographicalStructureFactors>
+						</FareStructureElement>
+						<FareStructureElement id="SOF:FareStructureElement:riksregulativet" version="1">
+							<Name>Riksregulativet for ferjer 2018</Name>
+							<geographicalStructureFactors id="SOF:geographicalStructureFactors:1">
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone1F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone2F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone3F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone4F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone5F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone6F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone7F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone8F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone9F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone10F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone11F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone12F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone13F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone14F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone15F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone16F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone17F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone18F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone19F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone20F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone21F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone22F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone23F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone24F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone25F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone26F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone27F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone28F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone29F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone30F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone31F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone32F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone33F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone34F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone35F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone36F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone37F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone38F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone39F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone40F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone41F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone42F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone43F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone44F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone45F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone46F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone47F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone48F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone49F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone50F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone51F"/>
+								<GeographicalStructureFactorRef ref="SOF:GeographicalStructureFactor:Sone52F"/>
+							</geographicalStructureFactors>
+						</FareStructureElement>
+					</fareStructureElements>
+
+					<!-- Tariffer -->
+
+					<tariffs>
+						<Tariff id="SOF:Tariff:EnkeltbillettBuss" version="1">
+							<ValidBetween>
+								<FromDate>2018-01-01T00:00:00</FromDate>
+								<ToDate>2018-12-31T00:00:00</ToDate>
+							</ValidBetween>
+							<AuthorityRef ref="SOF:Authority:1"/>
+							<GroupOfLinesRef ref="SOF:GroupOfLines:1"/>
+							<TariffBasis>distance</TariffBasis>
+							<fareStructureElements>
+								<FareStructureElementRef ref="SOF:FareStructureElement:kmsoner"/>
+								<FareStructureElementRef ref="SOF:FareStructureElement:riksregulativet"/>
+							</fareStructureElements>
+							<PriceUnitRef ref="SOF:priceUnits:1"/>
+							<priceGroups>
+								<PriceGroupRef ref="SOF:pricegroup:1"/>
+							</priceGroups>
+						</Tariff>
+					</tariffs>
+
+					<!-- Usage parameters -->
+
+					<usageParameters>
+
+						<!-- Travel Usage Parameters	
+							
+							USAGE VALIDITY PERIOD	-->
+
+						<UsageValidityPeriod id="SOF:Usagevalidityperiod:singletrip" version="1">
+							<ValidityPeriodType>singleTrip</ValidityPeriodType>
+							<UsageTrigger>startOutboundRide</UsageTrigger>
+							<UsageEnd>endOfTrip</UsageEnd>
+						</UsageValidityPeriod>
+
+						<!-- FREQUENCY OF USE	-->
+
+						<FrequencyOfUse id="SOF:frequencyofuse:singletrip" version="1">
+							<FrequencyOfUseType>single</FrequencyOfUseType>
+						</FrequencyOfUse>
+
+						<!-- INTERCHANGING	-->
+
+						<Interchanging id="SOF:interchanging:singletrip" version="1">
+							<CanInterchange>true</CanInterchange>
+						</Interchanging>
+
+						<!-- Eligibility Usage Parameters	
+							
+							GROUP TICKET	-->
+
+						<GroupTicket id="SOF:Groupticket:group" version="1">
+							<Name>Family</Name>
+							<Description>2 or more persons (adults/children), minimum travel distance = 9 km</Description>
+							<!-- Denne rabatten krever en mimimum reiselengde på 9 km. Hvordan håndtere det? -->
+							<!-- The group discount requires a mimimum travel distance of 9 km. How to handle this? -->
+							<!-- ParentRef can be either adult or child --> 
+							<MinimumNumberOfPersons>2</MinimumNumberOfPersons>
+							<companionProfiles id="SOF:Companionprofiles:adultchild">
+								<CompanionProfile id="SOF:Companionprofile:adult1" version="1">
+									<DiscountingRuleRef ref="SOF:DiscountingRule:25%"/>
+									<ParentRef ref="SOF:UserProfile:adult"/>	 
+									<UserProfileRef ref="SOF:UserProfile:adult"/>
+								</CompanionProfile>
+								<CompanionProfile id="SOF:Companionprofile:adult2" version="1">
+									<DiscountingRuleRef ref="SOF:DiscountingRule:25%"/>
+									<ParentRef ref="SOF:UserProfile:child"/>	 
+									<UserProfileRef ref="SOF:UserProfile:adult"/>
+								</CompanionProfile>
+								<CompanionProfile id="SOF:Companionprofile:child1" version="1">
+									<DiscountingRuleRef ref="SOF:DiscountingRule:62.5%"/>
+									<ParentRef ref="SOF:UserProfile:adult"/>
+									<UserProfileRef ref="SOF:UserProfile:child"/>
+								</CompanionProfile>
+								<CompanionProfile id="SOF:Companionprofile:child2" version="1">
+									<DiscountingRuleRef ref="SOF:DiscountingRule:62.5%"/>
+									<ParentRef ref="SOF:UserProfile:child"/>
+									<UserProfileRef ref="SOF:UserProfile:child"/>
+								</CompanionProfile>
+							</companionProfiles>
+							<PricingBasis>perOffer</PricingBasis>
+							<!-- Er ikke sikker på denne -->
+							<GroupBookingFacility>groupsAllowed</GroupBookingFacility>
+						</GroupTicket>
+						<GroupTicket id="SOF:Groupticket:gruppe12" version="1">
+							<Name>Ferje - Reisegruppe</Name>
+							<Description>Groups with 12 persons or more get 17% discount (adults)</Description>
+							<MinimumNumberOfPersons>12</MinimumNumberOfPersons>
+							<companionProfiles id="SOF:Companionprofile:allprofiles">
+								<CompanionProfile id="SOF:Companionprofile:adult" version="1">
+									<DiscountingRuleRef ref="SOF:DiscountingRule:17%"/>
+									<ParentRef ref="SOF:UserProfile:adult"/>
+									<UserProfileRef ref="SOF:UserProfile:adult"/>
+								</CompanionProfile>
+							</companionProfiles>
+							<PricingBasis>perOffer</PricingBasis>
+							<!-- Er ikke sikker på denne -->
+							<GroupBookingFacility>groupsAllowed</GroupBookingFacility>
+						</GroupTicket>
+
+						<!-- USER PROFILES	-->
+
+						<UserProfile id="SOF:UserProfile:adult" version="1">
+							<Name>Adult</Name>
+							<DiscountingRuleRef ref="SOF:DiscountingRule:0%"/>
+							<UserType>adult</UserType>
+							<MinimumAge>16</MinimumAge>
+							<MaximumAge>66</MaximumAge>
+							<DiscountBasis>none</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="SOF:UserProfile:child">
+							<Name>Child</Name>
+							<DiscountingRuleRef ref="SOF:DiscountingRule:50%"/>
+							<MinimumAge>4</MinimumAge>
+							<MaximumAge>15</MaximumAge>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="SOF:UserProfile:employeechild">
+							<Name>Child of employee</Name>
+							<MinimumAge>4</MinimumAge>
+							<MaximumAge>17</MaximumAge>
+						</UserProfile>
+						<UserProfile version="1" id="SOF:UserProfile:senior">
+							<Name>Senior</Name>
+							<DiscountingRuleRef ref="SOF:DiscountingRule:50%"/>
+							<MinimumAge>67</MinimumAge>
+							<ProofRequired>identityDocument</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="SOF:UserProfile:military">
+							<Name>Military</Name>
+							<DiscountingRuleRef ref="SOF:DiscountingRule:50%"/>
+							<ProofRequired>identityDocument</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="SOF:UserProfile:student">
+							<Name>Student</Name>
+							<DiscountingRuleRef ref="SOF:DiscountingRule:25%"/>
+							<MinimumAge>16</MinimumAge>
+							<ProofRequired>studentCard</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="SOF:UserProfile:infant">
+							<Name>Infant</Name>
+							<DiscountingRuleRef ref="SOF:DiscountingRule:100%"/>
+							<MaximumAge>3</MaximumAge>
+							<DiscountBasis>free</DiscountBasis>
+						</UserProfile>
+						<UserProfile version="1" id="SOF:UserProfile:disabled">
+							<Name>Disabled</Name>
+							<DiscountingRuleRef ref="SOF:DiscountingRule:50%"/>
+							<ProofRequired>medicalDocument</ProofRequired>
+							<DiscountBasis>discount</DiscountBasis>
+						</UserProfile>
+
+						<!-- COMMERCIAL PROFILE  -->
+
+						<CommercialProfile id="SOF:CommercialProfile:employee" version="1">
+							<prices>
+								<UsageParameterPrice id="SOF:UsageParameterPrice:employee"
+									version="1">
+									<Amount>500</Amount>
+									<UserProfileRef ref="SOF:UserProfile:adult"/>
+								</UsageParameterPrice>
+							</prices>
+							<GeneralGroupOfEntitiesRef ref="SOF:Operator:1"/>
+						</CommercialProfile>
+						<CommercialProfile id="SOF:CommercialProfile:employeespouse" version="1">
+							<prices>
+								<UsageParameterPrice id="SOF:UsageParameterPrice:employeespouse"
+									version="1">
+									<Amount>1000</Amount>
+									<UserProfileRef ref="SOF:UserProfile:adult"/>
+								</UsageParameterPrice>
+							</prices>
+							<GeneralGroupOfEntitiesRef ref="SOF:Operator:1"/>
+						</CommercialProfile>
+						<CommercialProfile id="SOF:CommercialProfile:employeechild" version="1">
+							<prices>
+								<UsageParameterPrice id="SOF:UsageParameterPrice:employeechild"
+									version="1">
+									<Amount>500</Amount>
+									<UserProfileRef ref="SOF:UserProfile:employeechild"/>
+								</UsageParameterPrice>
+							</prices>
+							<GeneralGroupOfEntitiesRef ref="SOF:Operator:1"/>
+						</CommercialProfile>
+						<CommercialProfile id="SOF:CommercialProfile:employeeferry" version="1">
+							<prices>
+								<UsageParameterPrice id="SOF:UsageParameterPrice:employeeferry" version="1">
+									<Amount>0</Amount>
+									<UserProfileRef ref="SOF:UserProfile:adult"/>
+								</UsageParameterPrice>
+							</prices>
+							<GeneralGroupOfEntitiesRef ref="SOF:Operator:1"/>
+						</CommercialProfile>
+						<CommercialProfile id="SOF:CommercialProfile:employeespouseferry" version="1">
+							<prices>
+								<UsageParameterPrice id="SOF:UsageParameterPrice:employeespouseferry" version="1">
+									<Amount>0</Amount>
+									<UserProfileRef ref="SOF:UserProfile:adult"/>
+								</UsageParameterPrice>
+							</prices>
+							<GeneralGroupOfEntitiesRef ref="SOF:Operator:1"/>
+						</CommercialProfile>
+						<CommercialProfile id="SOF:CommercialProfile:employeechildferry" version="1">
+							<prices>
+								<UsageParameterPrice id="SOF:UsageParameterPrice:employeechildferry" version="1">
+									<Amount>0</Amount>
+									<UserProfileRef ref="SOF:UserProfile:employeechild"/>
+								</UsageParameterPrice>
+							</prices>
+							<GeneralGroupOfEntitiesRef ref="SOF:Operator:1"/>
+						</CommercialProfile>
+						
+						<!-- COMPANION PROFILE  -->
+
+						<CompanionProfile id="SOF:CompanionProfile:infant" version="1">
+							<ParentRef ref="SOF:UserProfile:adult"/>
+							<UserProfileRef ref="SOF:UserProfile:infant"/>
+							<DiscountBasis>free</DiscountBasis>
+						</CompanionProfile>
+						<CompanionProfile id="SOF:CompanionProfile:adult1" version="1">
+							<ParentRef ref="SOF:UserProfile:senior"/>
+							<UserProfileRef ref="SOF:UserProfile:adult"/>
+							<DiscountBasis>discount</DiscountBasis>
+						</CompanionProfile>
+						<CompanionProfile id="SOF:CompanionProfile:adult2" version="1">
+							<ParentRef ref="SOF:UserProfile:disabled"/>
+							<UserProfileRef ref="SOF:UserProfile:adult"/>
+							<DiscountBasis>discount</DiscountBasis>
+						</CompanionProfile>
+
+						<!-- LUGGAGE ALLOWANCE -->
+
+						<LuggageAllowance id="SOF:LuggageAllowance:pushchair" version="1">
+							<Description>Baby stroller, wheel chair</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>pushChair</BaggageType>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="SOF:LuggageAllowance:animal1" version="1">
+							<Description>Dog</Description>
+							<DiscountingRuleRef ref="SOF:DiscountingRule:50%"/>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>animal</BaggageType>
+							<LuggageChargingBasis>chargedByItem</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="SOF:LuggageAllowance:animal2" version="1">
+							<Description>Guard dog accompanying a blind person OR police dog accompanying a policeman on duty</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>animal</BaggageType>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="SOF:LuggageAllowance:bicycle" version="1">
+							<Description>Bicycle</Description>
+							<DiscountingRuleRef ref="SOF:DiscountingRule:50%"/>
+							<prices>
+								<UsageParameterPrice id="SOF:UsageParameterPrice:Bicycle"
+									version="1">
+									<LimitingRule id="SOF:LimitingRule:BicycleMax@Luggage" version="1">
+										<MinimumPrice>16</MinimumPrice>
+									</LimitingRule>
+								</UsageParameterPrice>
+							</prices>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>bicycle</BaggageType>
+							<LuggageChargingBasis>chargedByItem</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="SOF:LuggageAllowance:handluggage1" version="1">
+							<Description>Handluggage up to 20 kg</Description>
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>handLuggage</BaggageType>
+							<TotalWeight>20</TotalWeight>
+							<LuggageChargingBasis>free</LuggageChargingBasis>
+						</LuggageAllowance>
+						<LuggageAllowance id="SOF:LuggageAllowance:handluggage2" version="1">
+							<Description>Handluggage over 20 kg</Description>
+							<DiscountingRuleRef ref=""/>
+							<!-- Finn ut hva ref'en skal være her (Special fares) -->
+							<BaggageUseType>carryOn</BaggageUseType>
+							<BaggageType>handLuggage</BaggageType>
+							<TotalWeight>20</TotalWeight>
+							<LuggageChargingBasis>chargedByWeight</LuggageChargingBasis>
+						</LuggageAllowance>
+
+						<!-- Booking Usage Parameters
+							
+							 REPLACING -->
+						<!-- This has to checked out
+						<Replacing id="SOF:Replacing:singleticket" version="1">
+							<Allowed>full</Allowed>
+						</Replacing>
+						<Replacing id="SOF:Replacing:groupticket" version="1">
+							<Allowed>full</Allowed>
+						</Replacing> -->
+
+						<!-- EXCHANGING -->
+						<!-- This has to checked out
+						<Exchanging id="SOF:Exchanging:singleticket" version="1">
+							<ExchangableTo>anyProduct</ExchangableTo>
+						</Exchanging>
+						<Exchanging id="SOF:Exchanging:groupticket" version="1">
+							<ExchangableTo>anyProduct</ExchangableTo>
+						</Exchanging> -->
+
+						<!-- PURCHASE WINDOW -->
+
+						<PurchaseWindow id="SOF:Purchasewindow:singleticket" version="1">
+							<PurchaseWhen>advanceAndDayOfTravel</PurchaseWhen>
+							<MaximumPeriodBeforeDeparture>PT24H</MaximumPeriodBeforeDeparture>
+						</PurchaseWindow>
+
+						<!-- REFUNDING -->
+
+						<Refunding id="SOF:Refunding:singleticket" version="1"></Refunding>
+
+						<!-- RESERVING -->
+
+						<Reserving id="SOF:Reserving:singleticket" version="1">
+							<ReservingRequirements>noReservationsPossible</ReservingRequirements>
+						</Reserving>
+
+						<!-- TRANSFERABILITY -->
+
+						<Transferability id="SOF:Transferability:cantransfertrue" version="1">
+							<CanTransfer>true</CanTransfer>
+						</Transferability>
+
+						<!-- Charging Usage Parameters
+							
+							 PENALTY POLICY -->
+
+						<PenaltyPolicy id="SOF:Penaltypolicy:penaltypolicytypebus" version="1">
+							<PricingRuleRef ref=""/>
+							<!-- Pris: 'Double fare. Min. fee: kr 300. -->
+							<PenaltyPolicyType>noTicket</PenaltyPolicyType>
+						</PenaltyPolicy>
+						<PenaltyPolicy id="SOF:Penaltypolicy:penaltypolicytypeferry" version="1">
+							<PricingRuleRef ref=""/>
+							<!-- Pris: kr 750 -->
+							<PenaltyPolicyType>noTicket</PenaltyPolicyType>
+						</PenaltyPolicy>
+						
+						<!-- Cancelling Usage Parameters
+							
+							 CANCELLING -->
+
+						<Cancelling id="SOF:Cancelling:cancel" version="1"/>
+
+					</usageParameters>
+
+					<!-- Takstprodukter/Fare products -->
+
+					<fareProducts>
+
+						<PreassignedFareProduct id="SOF:PreassignedFareProduct:BusOneWayTicket"
+							version="1">
+							<Name>Enkeltbillett Buss</Name>
+							<Description>Enkeltbillett for lokale bussruter i Sogn og Fjordane</Description>
+							<SupplementProductRef ref="SOF:SupplementProduct:BicycleBus"/>
+							<validityParameterAssignments>
+								<GenericParameterAssignment
+									id="SOF:GenericParameterAssignment:BusOneWayTicket" version="1"
+									order="1">
+									<FareStructureElementRef ref="SOF:FareStructureElement:kmsoner"/>
+									<limitations>
+										<ReplacingRef ref="SOF:Replacing:singleticket"/>
+										<ReplacingRef ref="SOF:Replacing:groupticket"/>
+										<ExchangingRef ref="SOF:Exchanging:singleticket"/>
+										<ExchangingRef ref="SOF:Exchanging:groupticket"/>
+										<PurchaseWindowRef ref="SOF:Purchasewindow:singleticket"/>
+										<PurchaseWindowRef ref="SOF:Purchasewindow:groupticket"/>
+										<RefundingRef ref="SOF:Refunding:singleticket"/>
+										<RefundingRef ref="SOF:Refunding:groupticket"/>
+										<ReservingRef ref="SOF:Reserving:singleticket"/>
+										<ReservingRef ref="SOF:Reserving:groupticket"/>
+										<TransferabilityRef ref="SOF:Transferability:cantransfer"/>
+										<PenaltyPolicyRef ref="SOF:Penaltypolicy:penaltypolicytype"/>
+										<CancellingRef ref="SOF:Cancelling:cancel"/>
+									</limitations>
+								</GenericParameterAssignment>
+							</validityParameterAssignments>
+							<validableElements>
+								<ValidableElement id="SOF:ValidableElement:oneWayTicketBus" version="1">
+									<Name>Enkeltbillett buss - bussdelen</Name>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="SOF:ValidableElementGenericParameterAssignment:BusOneWayTicket"	version="1" order="1">
+											<FareStructureElementRef ref="SOF:FareStructureElement:kmsoner"/>
+											<limitations>
+												<UsageValidityPeriodRef ref="SOF:Usagevalidityperiod:singletrip"/>
+												<FrequencyOfUseRef ref="SOF:frequencyofuse:singletrip"/>
+												<InterchangingRef ref="SOF:interchanging:singletrip"/>
+												<GroupTicketRef ref="SOF:Groupticket:family"/>
+												<UserProfileRef ref="SOF:UserProfile:child"/>
+												<UserProfileRef ref="SOF:UserProfile:senior"/>
+												<UserProfileRef ref="SOF:UserProfile:student"/>
+												<UserProfileRef ref="SOF:UserProfile:military"/>
+												<UserProfileRef ref="SOF:UserProfile:disabled"/>
+												<UserProfileRef ref="SOF:UserProfile:infant"/>
+												<CommercialProfileRef ref="SOF:CommercialProfile:employee"/>
+												<CommercialProfileRef ref="SOF:CommercialProfile:employeespouse"/>
+												<CommercialProfileRef ref="SOF:CommercialProfile:employeechild"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:pushchair"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:animal1"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:animal2"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:bicycle"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:handluggage1"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:handluggage2"/>
+											</limitations>
+											<validityParameters>
+												<GroupOfLinesRef ref="SOF:GroupOfLines:2"/>
+												<VehicleModes>bus</VehicleModes>
+												<AuthorityRef ref="SOF:Authority:1"/>
+												<GroupOfOperatorsRef ref="SOF:GroupOfOperators:1"/>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+								<ValidableElement id="SOF:ValidableElement:oneWayTicketBusFerry" version="1">
+									<Name>Enkeltbillett buss - ferjedelen</Name>
+									<validityParameterAssignments>
+										<GenericParameterAssignment id="SOF:ValidableElementGenericParameterAssignment:BusOneWayTicketFerry" version="1" order="1">
+											<FareStructureElementRef ref="SOF:FareStructureElement:riksregulativet"/>
+											<limitations>
+												<UsageValidityPeriodRef ref="SOF:Usagevalidityperiod:singletrip"/>
+												<FrequencyOfUseRef ref="SOF:frequencyofuse:singletrip"/>
+												<InterchangingRef ref="SOF:interchanging:singletrip"/>
+												<GroupTicketRef ref="SOF:Groupticket:gruppe12"/>
+												<UserProfileRef ref="SOF:UserProfile:child"/>
+												<UserProfileRef ref="SOF:UserProfile:senior"/>
+												<UserProfileRef ref="SOF:UserProfile:studentferry"/>
+												<UserProfileRef ref="SOF:UserProfile:military"/>
+												<UserProfileRef ref="SOF:UserProfile:disabled"/>
+												<UserProfileRef ref="SOF:UserProfile:infant"/>
+												<CommercialProfileRef ref="SOF:CommercialProfile:employeeferry"/>
+												<CommercialProfileRef ref="SOF:CommercialProfile:employeespouseferry"/>
+												<CommercialProfileRef ref="SOF:CommercialProfile:employeechildferry"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:pushchair"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:animal1"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:animal2"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:bicycle"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:handluggage1"/>
+												<LuggageAllowanceRef ref="SOF:LuggageAllowance:handluggage2"/>
+											</limitations>
+											<validityParameters>
+												<GroupOfLinesRef ref="SOF:GroupOfLines:3"/>
+												<VehicleModes>bus</VehicleModes>
+												<AuthorityRef ref="SOF:Authority:1"/>
+												<GroupOfOperatorsRef ref="SOF:GroupOfOperators:2"/>
+											</validityParameters>
+										</GenericParameterAssignment>
+									</validityParameterAssignments>
+								</ValidableElement>
+							</validableElements>
+							<accessRightsInProduct>
+								<AccessRightInProduct id="SOF:AccessRightInProduct:oneWayTicketBus" version="1" order="1">
+									<Description>Enkeltbillett buss - bussdelen</Description>
+									<ValidableElementRef ref="SOF:ValidableElement:oneWayTicketBus" version="1"/>
+								</AccessRightInProduct>
+								<AccessRightInProduct id="SOF:AccessRightInProduct:oneWayTicketBusFerry" version="1" order="1">
+									<Description>Enkeltbillett buss - ferjedelen</Description>
+									<ValidableElementRef ref="SOF:ValidableElement:oneWayTicketBusFerry" version="1"/>
+								</AccessRightInProduct>
+							</accessRightsInProduct>
+						</PreassignedFareProduct>
+
+					</fareProducts>
+
+					<!-- Discounts and limiting rules/Moderasjoner og maks./min. priser -->
+
+					<priceGroups>
+						<PriceGroup id="SOF:pricegroup:Enkeltbillett Buss" version="1">
+							<RoundingRef ref=""/>
+							<members id="SOF:members:1">
+								<FareProductPrice id="SOF:FareProductPrice:100%" version="1">
+									<DiscountingRule version="1" id="SOF:DiscountingRule:100%">
+										<DiscountAsPercentage>100</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+								<FareProductPrice id="SOF:FareProductPrice:75%" version="1">
+									<DiscountingRule version="1" id="SOF:DiscountingRule:25%">
+										<DiscountAsPercentage>25</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+								<FareProductPrice id="SOF:FareProductPrice:50%" version="1">
+									<DiscountingRule version="1" id="SOF:DiscountingRule:50%">
+										<DiscountAsPercentage>50</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+								<FareProductPrice id="SOF:FareProductPrice:17%" version="1">
+									<DiscountingRule version="1" id="SOF:DiscountingRule:17%">
+										<DiscountAsPercentage>17</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+								<FareProductPrice id="SOF:FareProductPrice:0%" version="1">
+									<DiscountingRule version="1" id="SOF:DiscountingRule:0%">
+										<DiscountAsPercentage>0</DiscountAsPercentage>
+									</DiscountingRule>
+								</FareProductPrice>
+							</members>
+						</PriceGroup>
+					</priceGroups>
+
+					<!-- Distribution channels/distribusjonskanaler -->
+
+					<distributionChannels>
+						<DistributionChannel id="SOF:DistributionChannel:onBoard" version="1">
+							<DistributionChannelType>onBoard</DistributionChannelType>
+							<AuthorityRef ref="SOF:Authority:1"/>
+						</DistributionChannel>
+					</distributionChannels>
+
+					<groupsOfDistributionChannels>
+						<GroupOfDistributionChannels id="SOF:GroupOfDistributionChannels:onBoard" version="1">
+							<members>
+								<DistributionChannelRef ref="SOF:DistributionChannel:onBoard"/>
+							</members>
+						</GroupOfDistributionChannels>
+					</groupsOfDistributionChannels>
+
+					<!-- Fulfilment methods/utleveringsmåter til kunde -->
+
+					<fulfilmentMethods>
+						<FulfilmentMethod id="SOF:FulfilmentMethod:Driver" version="1">
+							<Name>Bussjåfør</Name>
+							<FulfilmentMethodType>conductor</FulfilmentMethodType>
+							<!-- Her bør verdien "driver" innføres, siden det ikke er konduktører lenger på bussene -->
+						</FulfilmentMethod>
+					</fulfilmentMethods>
+
+					<!-- Type of travel documents / billettmedier  -->
+
+					<typesOfTravelDocuments>
+						<TypeOfTravelDocument id="SOF:TypeOfTravelDocument:paperTicket" version="1">
+							<Name>Papirbillett</Name>
+							<IsCard>false</IsCard>
+							<MediaType>paperTicket</MediaType>
+						</TypeOfTravelDocument>
+					</typesOfTravelDocuments>
+
+					<!-- Sales offer packages/Salgspakker -->
+
+					<SalesOfferPackages>
+						<SalesOfferPackage id="SOF:SalesOfferPackage:OneWayTicketBus" version="1">
+							<Name>Enkeltbillett Buss</Name>
+							<distributionAssignments>
+								<DistributionAssignment
+									id="SOF:DistributionAssignment:OneWayTicketBus" version="1"
+									order="1">
+									<GroupOfDistributionChannelsRef ref="SOF:GroupOfDistributionChannels:onBoard"/>
+									<FulfilmentMethodRef ref="SOF:FulfilmentMethod:Driver"/>
+								</DistributionAssignment>
+							</distributionAssignments>
+							<SalesOfferPackageElements>
+								<SalesOfferPackageElement id="SOF:SalesOfferPackageElement:OneWayTicketBus">
+									<RequiresValidation>false</RequiresValidation>
+									<TypeOfTravelDocumentRef ref="SOF:TypeOfTravelDocument:paperTicket"/>
+									<PreassignedFareProductRef ref="SOF:PreassignedFareProduct:BusOneWayTicket"/>
+								</SalesOfferPackageElement>
+								<SalesOfferPackageElementRef ref="SOF:PreassignedFareProduct:BusOneWayTicket" version="1"/>
+							</SalesOfferPackageElements>
+						</SalesOfferPackage>
+					</SalesOfferPackages>
+
+				</FareFrame>
+
+				<SalesTransactionFrame id="stf" version="1">
+					<!-- not yet evaluated -->
+				</SalesTransactionFrame>
+
+			</frames>
+
+		</CompositeFrame>
+
+	</dataObjects>
+
+</PublicationDelivery>
